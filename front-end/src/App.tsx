@@ -1,9 +1,11 @@
 import "./App.css";
 import logo from "./assets/habit.png";
+import calander from "./assets/calander.png"
+import { motion } from "motion/react"
 
 function App() {
-  // #14a901
-
+  const pColor = "#14a901";
+  let arrya = ["M","T","W","T","F","S","S"]
   return (
     <>
       <div className="bg-gray-50 font-mona p-5">
@@ -35,7 +37,20 @@ function App() {
               <p className="text-green-800">Track for best</p>
             </div>
 
-            <div
+            <motion.div
+            initial={{
+              y:20,
+              opacity:0
+              
+            }}
+            animate={{
+              y:0,
+              opacity:1
+            }}
+            transition={{
+              duration:1,
+              
+            }}
               className="
             
               flex flex-col items-center  h-[100] pt-6  font-[600] text-center  text-[#093125]"
@@ -65,26 +80,54 @@ function App() {
                 </div>
                 manage and track habits
               </p>
-            </div>
+            </motion.div>
 
-            <div className="px-10 pt-6 text-center text-[1.3rem] font-normal  text-green-950">
+            <motion.div initial={{
+              scale:0
+            }}
+            animate={{
+              scale:1
+            }} 
+            transition={{
+              delay:0.8,
+              duration:0.8
+            }} className="px-10 pt-6 text-center text-[1.3rem] font-normal  text-green-950">
               <p>
                 H-Track helps you to take control and effectively track and
                 manage the process of breaking bad habits or adopting new ones.
                 Start your transformation today!
               </p>
-            </div>
+            </motion.div>
 
-            <div className="pt-10">
-              <button className=" px-5 py-2 text-white bg-[#21a510] hover:cursor-pointer  rounded-xl font-medium ">
+            <motion.div initial={{
+              
+              opacity:0
+            }} 
+            animate={{
+            
+              opacity:1
+            }}
+            transition={{
+              delay:1.5,
+              duration:0.8
+            }}
+            className="pt-10">
+              <motion.button 
+          
+              whileHover={{
+                scale:1.1,
+              }} 
+              
+                className=" px-5 py-2 text-white bg-[#21a510] hover:cursor-pointer  rounded-xl font-medium ">
                 Get Started
-              </button>
-            </div>
+              </motion.button>
+            </motion.div>
+
           </div>
         </div>
       </div>
 
-      <div className=" pt-14 flex items-center flex-col justify-center font-mona">
+      <div className=" pt-35 flex items-center flex-col justify-center font-mona">
         <div className="bg-white flex items-center gap-2 text-sm font-medium py-1 px-3 shadow-2xl border-1 border-gray-300 rounded-full">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -106,26 +149,99 @@ function App() {
           
         </div>
 
+        <div className="pt-6 pb-20  flex items-center justify-center text-center px-60 flex-col ">
+           <p className="leading-16 text-green-950 text-[3rem] text-center  font-medium">Adapt good habits and break new ones using a scientific way</p>
+           <p className="pt-7 text-green-950 text-[1.2rem]  font-normal">You can break any habit and adopt a new one in just 21 days. Commit to the process, and you will see significant changes in your life.</p>
+        </div>
+
     <div className="bg-[#f1f4f1] mt-10 w-[90%]  rounded-xl p-6 flex flex-col md:flex-row items-start md:items-center justify-between shadow-sm">
       {/* Text Section */}
-      <div className="max-w-lg mb-10 px-5">
+      <div className=" mb-10 px-5 w-70%">
         <h2 className="text-2xl font-semibold text-gray-900 mb-2">
           Track Progress
         </h2>
-        <p className="text-gray-700 mb-10 mt-2">
-         H-Track helps you monitor your progress, motivating you to break bad habits and develop good ones, setting the stage for your personal growth.
+        <p className="text-gray-700 text-[1.2rem] mb-10 mt-4 pr-10">
+         H-Track enables you to track your progress with precision, empowering you to break bad habits and adopt good ones. This is essential for achieving your personal growth and success.
         </p>
-        <button className="bg-green-700 hover:bg-green-800 text-white px-5 py-2 rounded-md shadow-md mt-14">
+        <button className="bg-green-700 hover:cursor-pointer hover:bg-green-800 text-white px-5 py-2 rounded-md shadow-md mt-10">
           Explore all
         </button>
       </div>
 
       {/* Chart Section */}
-      <div className="bg-white rounded-lg p-4 w-full md:w-1/2">
-        
+      <div className=" flex justify-center  w-full   ">
+        <img src={calander}  className="size-full" />
       </div>
     </div>
 
+    <div className="mt-12 w-[90%] flex justify-between items-center gap-5">
+      <div className="bg-[#f1f4f1] flex w-full flex-col rounded-xl">
+       <div className="p-10 text-center flex flex-col justify-center items-center w-full">
+        <p className="text-green-950 text-center text-[1.6rem] font-semibold">Streak Manager</p>
+        <p className={`mt-5 text-[1.1rem]  text-gray-950`}>H-Track offers streak management to keep you motivated and helps you stay on the right path.</p>
+       </div>
+
+       <div className="bg-white p-8 flex justify-center flex-col items-center m-1 rounded-xl ">
+        <img width="100" height="100" src="https://img.icons8.com/plasticine/100/medal2-1.png" alt="medal2-1"/>
+        <div className="bg-white   flex items-center justify-center gap-6  py-[3%] px-5 mx-2 w-[100%]">
+          
+          
+          {
+        arrya.map(item=>(
+          <div>
+            <div className="text-center mb-3 font-bold text-xl text-gray-800/50">
+              {item}
+              </div>
+          <div className="w-10 h-10 bg-[#fd9503] rounded-full flex items-center justify-center  ">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4" stroke="white" className="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+</svg>
+
+          </div>
+          </div>
+        ))
+       }
+       
+        </div>
+
+
+        <p className="mt-2 font-semibold text-xl text-gray-600">7 days of streak!</p>
+        <p className="mt-2 text-gray-900 font-medium">You'r are makeing good progress</p>
+        </div>
+       
+      </div>
+      
+       
+        <div className="bg-[#f1f4f1] flex w-full flex-col rounded-xl">
+       <div className="p-10 text-center flex flex-col justify-center items-center w-full">
+        <p className="text-green-950 text-center text-[1.6rem] font-semibold">Dynamic Dashboard</p>
+        <p className={`mt-5 text-[1.1rem]  text-gray-950`}>H-Track delivers a powerful Dynamic Dashboard that enables you to monitor your progress and take decisive action.</p>
+       </div>
+
+       <div className="bg-white   flex justify-center flex-col items-center m-1 rounded-xl ">
+        
+
+
+       <div className="flex  items-center justify-center ">
+         
+       <img width={490}  src="https://img.freepik.com/premium-vector/vector-illustration-study-concept-market-expansion-financial-report-investment-data_675567-9237.jpg"/>
+       </div>
+        
+        
+
+
+        
+        </div>
+       
+      </div>
+    </div>
+    
+    
+
+      </div>
+
+      <div>
+        fsdf
       </div>
     </>
   );
