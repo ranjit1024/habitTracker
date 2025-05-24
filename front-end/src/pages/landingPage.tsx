@@ -16,10 +16,10 @@ export function LandingPage() {
         <div className="bg-gray-50 font-mona p-5 h-[]">
           
             
-            <div className="hero-conent relative flex items-center flex-col justify-center px-20 h-[70vh] pb-10">
+            <div className="hero-conent  flex items-center flex-col justify-center px-20 h-[70vh] pb-10 gap-5">
               {/* <----adding incons ---------> */}
 
-              <div className="bg-white flex items-center gap-1 text-sm font-medium py-1 px-3 shadow-2xl border-1 border-gray-300 rounded-full">
+              <div className="bg-white flex items-center gap- text-sm font-medium py-1 px-3 shadow-2xl border-1 border-gray-300 rounded-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -92,7 +92,7 @@ export function LandingPage() {
                   delay: 0.8,
                   duration: 0.8,
                 }}
-                className="mx-10  mt-6 text-center text-[1.3rem] flex font-normal  text-green-950"
+                className="mx-10   text-center text-[1.3rem] flex font-normal  text-green-950"
               >
                 <p>
                   H-Track helps you to take control and effectively track and
@@ -112,7 +112,7 @@ export function LandingPage() {
                   delay: 1.5,
                   duration: 0.8,
                 }}
-                className="pt-10"
+                className="mt-5"
               >
                 <motion.button
                  
