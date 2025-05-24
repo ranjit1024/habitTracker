@@ -15,11 +15,87 @@ export function LandingPage() {
       <Logo/>
 
       </div>
-        <div className="bg-gray-50 font-mona p-5">
-          
+        <div className="bg-gray-50 font-mona p-5 hero-conent  flex items-center flex-col justify-center px-20  pb-10 gap-5">
+               <div className="bg-white flex items-center gap- text-sm font-medium py-1 px-3 shadow-2xl border-1 border-gray-300 rounded-full">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="darkgreen"
+                  className="size-5"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"
+                  />
+                </svg>
+
+                <p className="text-green-800">Track for best</p>
+              </div>
+
+                <motion.div
+                
+                className="
             
-            <div className="hero-conent  flex items-center flex-col justify-center px-20 h-[70vh] pb-10 gap-5">
-              {/* <----adding incons ---------> */}
+              flex flex-col items-center  h-[100] pt-6  font-[600] text-center  text-[#093125]"
+              >
+                <p className="text-[5.4rem] z-1 relative ">
+                  {" "}
+                  <div className="bg-[#cff709a9] h-6 w-93 -z-1  absolute right-25 bottom-5 "></div>{" "}
+                  <div className=" h-6 w-93 -z-1  absolute top-2 -left-3 opacity-60 ">
+                    <img
+                      width="50"
+                      height="50"
+                      src="https://img.icons8.com/hands/100/positive-dynamic.png"
+                      alt="positive-dynamic"
+                    />
+                  </div>{" "}
+                  Single platform to{" "}
+                </p>
+
+                <p className="-mt-7 z-10 text-[5.4rem] relative">
+                  <div className="absolute -right-3 opacity-60 top-10 -z-1 ">
+                    <img
+                      width="30"
+                      height="50"
+                      src="https://img.icons8.com/officel/50/goal.png"
+                      alt="goal"
+                    />
+                  </div>
+                  manage and track habits
+                </p>
+              </motion.div>
+
+              <motion.div
+               
+                className="mx-10   text-center text-[1.3rem] flex font-normal  text-green-950"
+              >
+                <p>
+                  H-Track helps you to take control and effectively track and
+                  manage the process of breaking bad habits or adopting new
+                  ones. Start your transformation today!
+                </p>
+              </motion.div>
+
+               <motion.div
+              
+               
+              >
+                <motion.button
+                 
+                  onClick={() => {
+                    navigate("/signIn");
+                  }}
+                  className=" px-5 py-2 mt-5 text-white flex bg-[#21a510] hover:cursor-pointer  rounded-xl font-medium "
+                >
+                  Get Started
+                </motion.button>
+              </motion.div>
+            
+            {/* <div className="hero-conent  flex items-center flex-col justify-center px-20 h-[70vh] pb-10 gap-5">
+            
 
               <div className="bg-white flex items-center gap- text-sm font-medium py-1 px-3 shadow-2xl border-1 border-gray-300 rounded-full">
                 <svg
@@ -98,7 +174,9 @@ export function LandingPage() {
                   Get Started
                 </motion.button>
               </motion.div>
-            </div>
+            </div> */}
+
+
         
         </div>
 
