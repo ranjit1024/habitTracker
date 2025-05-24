@@ -1,8 +1,8 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "my-app",
+  "name": "backend",
   "main": "src/index.ts",
-  "compatibility_date": "2025-05-23"
+  "compatibility_date": "2025-05-24"
   // "compatibility_flags": [
   //   "nodejs_compat"
   // ],

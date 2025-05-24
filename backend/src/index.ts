@@ -6,6 +6,4 @@ app.get('/', (c) => {
   return c.text('Hello Hono!')
 })
 
-app.get()
-
 export default app
