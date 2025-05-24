@@ -1,5 +1,5 @@
 import Logo from "../assets/habit.png";
-import * as React from 'react';
+
 
 
 export function Main() {
