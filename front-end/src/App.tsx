@@ -146,7 +146,24 @@ function App() {
           <p className="text-green-800">FEATURE</p>
         </div>
 
-        <div className="pt-6 pb-20  flex items-center justify-center text-center px-60 flex-col ">
+        <motion.div initial={{
+          transform:'skewX(25deg)',
+          opacity:0,
+
+        }}
+        whileInView={{
+          transform: 'skewX(0deg)',
+          opacity:1
+        }}
+         transition={{
+          duration:0.8,
+          ease:'easeOut'
+        }} 
+        viewport={{
+          once:true,
+          amount:0.4,
+          
+        }} className="pt-6 pb-20  flex items-center justify-center text-center px-60 flex-col ">
           <p className="leading-16 text-green-950 text-[3rem] text-center  font-medium">
             Adapt good habits and break new ones using a scientific way
           </p>
@@ -154,9 +171,28 @@ function App() {
             You can break any habit and adopt a new one in just 21 days. Commit
             to the process, and you will see significant changes in your life.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="bg-[#f1f4f1] mt-10 w-[90%]  rounded-xl p-6 flex flex-col md:flex-row items-start md:items-center justify-between shadow-sm">
+        <motion.div initial={{
+          y:50,
+          
+          opacity:0
+        }}
+        whileInView={{
+          y:0,
+          opacity:1,
+        
+        }} 
+        transition={{
+          duration:0.8,
+          ease:'easeOut'
+        }} 
+        viewport={{
+          once:true,
+          amount:0.4,
+          
+        }}
+         className="bg-[#f1f4f1] mt-10 w-[90%]  rounded-xl p-6 flex flex-col md:flex-row items-start md:items-center justify-between shadow-sm">
           {/* Text Section */}
           <div className=" mb-10 px-5 w-70%">
             <h2 className="text-2xl font-semibold text-gray-900 mb-2">
@@ -176,9 +212,28 @@ function App() {
           <div className=" flex justify-center  w-full   ">
             <img src={calander} className="size-full" />
           </div>
-        </div>
+        </motion.div>
 
-        <div className="mt-12 w-[90%] flex max-md:flex-wrap justify-between items-center gap-5">
+        <motion.div initial={{
+          y:50,
+          
+          opacity:0
+        }}
+        whileInView={{
+          y:0,
+          opacity:1,
+        
+        }} 
+        transition={{
+          
+          duration:0.8,
+          ease:'easeOut'
+        }} 
+        viewport={{
+          once:true,
+          amount:0.4,
+          
+        }}  className="mt-12 w-[90%] flex max-md:flex-wrap justify-between items-center gap-5">
           <div className="bg-[#f1f4f1] flex w-full flex-col rounded-xl">
             <div className="p-10 text-center flex flex-col justify-center items-center w-full">
               <p className="text-green-950 text-center text-[1.6rem] font-semibold">
@@ -251,17 +306,51 @@ function App() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
 
-    <div className="bg-[#273f3c] p-10 mt-10 font-mona flex items-center justify-between">
+    <div className="bg-[#273f3c] p-10 mt-25 font-mona flex items-center justify-between">
       <div className="text-white text-[2.7rem] font-medium w-200">
-        <p className="relative">
+        <motion.p
+        initial={{
+          x:-100,
+          opacity:0
+        }}
+        whileInView={{
+          x:0,
+          opacity:1
+        }}
+        transition={{
+          duration:0.8,
+          ease:'easeOut'
+        }} 
+        viewport={{
+          once:true,
+          amount:0.4,
+          
+        }}className="relative">
           <div className="absolute bg-[#e1fa6d] h-1 w-34 bottom-2 -left-1"></div>It's time to become addicted to new habits.
-        </p>
+        </motion.p>
       </div>
       <div>
-        <button className="px-10 py-3 font-medium text-gray-900 hover:cursor-pointer bg-[#e1fa6d] rounded-2xl">Explore H-Track</button>
+        <motion.button 
+          initial={{
+          x:100,
+          opacity:0
+        }}
+        whileInView={{
+          x:0,
+          opacity:1
+        }}
+        transition={{
+          duration:0.8,
+          ease:'easeOut'
+        }} 
+        viewport={{
+          once:true,
+          amount:0.4,
+          
+        }}className="px-10 py-3 font-medium text-gray-900 hover:cursor-pointer bg-[#e1fa6d] rounded-2xl">Explore H-Track</motion.button>
       </div>
 
     </div>
