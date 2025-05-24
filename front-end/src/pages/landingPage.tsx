@@ -92,7 +92,7 @@ export function LandingPage() {
                   delay: 0.8,
                   duration: 0.8,
                 }}
-                className="mx-10  mt-6 text-center text-[1.3rem] font-normal  text-green-950"
+                className="mx-10  mt-6 text-center text-[1.3rem] flex font-normal  text-green-950"
               >
                 <p>
                   H-Track helps you to take control and effectively track and
@@ -119,7 +119,7 @@ export function LandingPage() {
                   onClick={() => {
                     navigate("/signIn");
                   }}
-                  className=" px-5 py-2 text-white bg-[#21a510] hover:cursor-pointer  rounded-xl font-medium "
+                  className=" px-5 py-2 text-white flex bg-[#21a510] hover:cursor-pointer  rounded-xl font-medium "
                 >
                   Get Started
                 </motion.button>
