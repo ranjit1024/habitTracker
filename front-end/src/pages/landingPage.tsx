@@ -16,8 +16,11 @@ export function LandingPage() {
 
       </div>
               
-        <div className="bg-gray-50 font-mona p-5   flex flex-col justify-center px-20  pb-10 gap-5">
-               <div className="bg-white flex items-center  text-sm font-medium py-1 px-3 shadow-2xl border-1 border-gray-300 rounded-full">
+        <div className="bg-gray-50 font-mona p-5  justify-center flex items-center flex-col px-20  pb-10 gap-5">
+          <div>
+
+        
+               <div className="bg-white  flex items-center justify-center  text-sm font-medium py-1 px-3 shadow-2xl border-1 border-gray-300 rounded-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -35,6 +38,7 @@ export function LandingPage() {
 
                 <p className="text-green-800">Track for best</p>
               </div>
+              </div>
 
                 <motion.div
                 
@@ -42,10 +46,10 @@ export function LandingPage() {
             
               flex flex-col items-center  h-[100] pt-6 pb-2 font-[600] text-center  text-[#093125]"
               >
-                <p className=" z-1 relative ">
+                <p className=" z-1 relative text-7xl ">
                   {" "}
                   {/* <div className="bg-[#cff709a9] h-6 w-93 -z-1  absolute right-25 bottom-5 "></div>{" "} */}
-                  <div className=" h-6 w-93 -z-1   top-2 -left-3 opacity-60 ">
+                  <div className=" h-6 w-100 -z-1   top-2 -left-3 opacity-60 ">
                     {/* <img
                       width="50"
                       height="50"
@@ -56,7 +60,7 @@ export function LandingPage() {
                   Single platform to{" "}
                 </p>
 
-                <p className="-mt-7 z-10  ">
+                <p className=" z-10 text-7xl  ">
                   {/* <div className="absolute -right-3 opacity-60 top-10 -z-1 ">
                     <img
                       width="30"
@@ -71,13 +75,29 @@ export function LandingPage() {
 
               <motion.div
                
-                className="mx-10   text-center  flex font-normal  text-green-950"
+                className="mx-10   text-center text-lg flex font-normal  text-green-950"
               >
                 <p>
                   H-Track helps you to take control and effectively track and
                   manage the process of breaking bad habits or adopting new
                   ones. Start your transformation today!
                 </p>
+              </motion.div>
+
+
+               <motion.div
+              
+               
+              >
+                <motion.button
+                 
+                  onClick={() => {
+                    navigate("/signIn");
+                  }}
+                  className=" px-5 py-2 mt-5 text-white flex bg-[#21a510] hover:cursor-pointer  rounded-xl font-medium "
+                >
+                  Get Started
+                </motion.button>
               </motion.div>
 
 
