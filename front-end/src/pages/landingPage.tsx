@@ -44,7 +44,7 @@ export function LandingPage() {
                 
                 className="
             
-              flex flex-col items-center  h-[100] pt-6 pb-2 font-[600] text-center  text-[#093125]"
+              flex flex-col items-center h-[100%] pt-6 pb-2 font-[600] text-center  text-[#093125]"
               >
                 <p className="  text-7xl ">
                   {" "}
