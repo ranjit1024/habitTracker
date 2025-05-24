@@ -39,17 +39,7 @@ export function LandingPage() {
               </div>
 
               <motion.div
-                initial={{
-                  y: 20,
-                  opacity: 0,
-                }}
-                animate={{
-                  y: 0,
-                  opacity: 1,
-                }}
-                transition={{
-                  duration: 1,
-                }}
+                
                 className="
             
               flex flex-col items-center  h-[100] pt-6  font-[600] text-center  text-[#093125]"
@@ -82,16 +72,7 @@ export function LandingPage() {
               </motion.div>
 
               <motion.div
-                initial={{
-                  scale: 0,
-                }}
-                animate={{
-                  scale: 1,
-                }}
-                transition={{
-                  delay: 0.8,
-                  duration: 0.8,
-                }}
+               
                 className="mx-10   text-center text-[1.3rem] flex font-normal  text-green-950"
               >
                 <p>
@@ -102,17 +83,8 @@ export function LandingPage() {
               </motion.div>
 
               <motion.div
-                initial={{
-                  opacity: 0,
-                }}
-                animate={{
-                  opacity: 1,
-                }}
-                transition={{
-                  delay: 1.5,
-                  duration: 0.8,
-                }}
-                className="mt-5"
+              
+               
               >
                 <motion.button
                  
