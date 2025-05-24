@@ -16,7 +16,7 @@ export function LandingPage() {
 
       </div>
               
-        <div className="bg-gray-50 font-mona p-5 hero-conent  flex items-center flex-col justify-center px-20  pb-10 gap-5">
+        <div className="bg-gray-50 font-mona p-5 hero-conent  flex flex-col justify-center px-20  pb-10 gap-5">
                <div className="bg-white flex items-center  text-sm font-medium py-1 px-3 shadow-2xl border-1 border-gray-300 rounded-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
