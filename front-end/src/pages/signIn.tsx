@@ -1,9 +1,14 @@
 
 import { useNavigate } from "react-router-dom";
+import { Logo } from "../components/logo";
 export function Signin() {
   const navigate = useNavigate();
   return (
     <>
+     <div className="absolute">
+        <Logo/>
+        
+        </div>
       <div className="h-[100vh]  flex justify-between items-center font-mona">
         <div className="w-[60%] h-full bg-center bg-cover bg-no-repeat bg-[url(https://cdn.leonardo.ai/users/a2f14ac8-df2c-4da0-aef1-7ecf6e45fdce/generations/88e56ba9-28c3-4342-93a6-cceca41e354a/Leonardo_Phoenix_10_A_visually_appealing_onemonth_calendar_wit_0.jpg)]">
 

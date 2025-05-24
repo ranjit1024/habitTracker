@@ -1,17 +1,21 @@
 import logo from "../assets/habit.png";
 import calander from "../assets/calander.png";
 import { motion } from "motion/react";
-import { Route, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
+import { Logo } from "../components/logo";
 export function LandingPage() {
   const navigate = useNavigate();
   let arrya = ["M", "T", "W", "T", "F", "S", "S"];
   return (
     <>
       <>
+      <div className="bg-gray-50">
+      <Logo/>
+
+      </div>
         <div className="bg-gray-50 font-mona p-5">
           <div>
             
-
             <div className="hero-conent relative flex items-center flex-col justify-center px-20 pt-20 pb-10">
               {/* <----adding incons ---------> */}
 
