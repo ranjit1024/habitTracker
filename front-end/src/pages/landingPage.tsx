@@ -14,7 +14,7 @@ export function LandingPage() {
 
       </div>
         <div className="bg-gray-50 font-mona p-5 h-[]">
-          <div>
+          
             
             <div className="hero-conent relative flex items-center flex-col justify-center px-20 h-[70vh] pb-10">
               {/* <----adding incons ---------> */}
@@ -92,7 +92,7 @@ export function LandingPage() {
                   delay: 0.8,
                   duration: 0.8,
                 }}
-                className="mx-10 z-10 mt-6 text-center text-[1.3rem] font-normal  text-green-950"
+                className="mx-10  mt-6 text-center text-[1.3rem] font-normal  text-green-950"
               >
                 <p>
                   H-Track helps you to take control and effectively track and
@@ -115,9 +115,7 @@ export function LandingPage() {
                 className="pt-10"
               >
                 <motion.button
-                  whileHover={{
-                    scale: 1.1,
-                  }}
+                 
                   onClick={() => {
                     navigate("/signIn");
                   }}
@@ -127,7 +125,7 @@ export function LandingPage() {
                 </motion.button>
               </motion.div>
             </div>
-          </div>
+        
         </div>
 
         <div className=" pt-25 flex items-center flex-col justify-center font-mona">
