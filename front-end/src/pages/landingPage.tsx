@@ -13,10 +13,10 @@ export function LandingPage() {
       <Logo/>
 
       </div>
-        <div className="bg-gray-50 font-mona p-5 ">
+        <div className="bg-gray-50 font-mona p-5 h-[]">
           <div>
             
-            <div className="hero-conent relative flex items-center flex-col justify-center px-20 pt-5 pb-10">
+            <div className="hero-conent relative flex items-center flex-col justify-center px-20 h-[70vh] pb-10">
               {/* <----adding incons ---------> */}
 
               <div className="bg-white flex items-center gap-1 text-sm font-medium py-1 px-3 shadow-2xl border-1 border-gray-300 rounded-full">
@@ -54,7 +54,7 @@ export function LandingPage() {
             
               flex flex-col items-center  h-[100] pt-6  font-[600] text-center  text-[#093125]"
               >
-                <p className="text-[5.4rem] z-10 relative ">
+                <p className="text-[5.4rem] z-1 relative ">
                   {" "}
                   <div className="bg-[#cff709a9] h-6 w-93 -z-1  absolute right-25 bottom-5 "></div>{" "}
                   <div className=" h-6 w-93 -z-1  absolute top-2 -left-3 opacity-60 ">
@@ -68,7 +68,7 @@ export function LandingPage() {
                   Single platform to{" "}
                 </p>
 
-                <p className="-mt-7 z-0 text-[5.4rem] relative">
+                <p className="-mt-7 z-10 text-[5.4rem] relative">
                   <div className="absolute -right-3 opacity-60 top-10 -z-1 ">
                     <img
                       width="30"
@@ -130,7 +130,7 @@ export function LandingPage() {
           </div>
         </div>
 
-        <div className=" pt-30 flex items-center flex-col justify-center font-mona">
+        <div className=" pt-25 flex items-center flex-col justify-center font-mona">
           <div className="bg-white flex items-center gap-2 text-sm font-medium py-1 px-3 shadow-2xl border-1 border-gray-300 rounded-full">
             <svg
               xmlns="http://www.w3.org/2000/svg"
