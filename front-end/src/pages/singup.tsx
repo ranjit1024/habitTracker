@@ -1,6 +1,6 @@
 
 import { useNavigate } from "react-router-dom";
-export function Signin() {
+export function SignUp() {
   const navigate = useNavigate();
   return (
     <>
@@ -10,11 +10,24 @@ export function Signin() {
  
         </div>
         <div className="bg-white flex  flex-col px-7 py-10 rounded-md  w-[50%] ">
-        <p className="text-center mb-5 text-[1.7rem] text-[#111c1d] font-medium">Sign In</p>    
+        <p className="text-center mb-5 text-[1.7rem] text-[#111c1d] font-medium">Sign Up</p>    
     <div className="w-full mb-5">
-  <div className="relative w-full">    
-    <label htmlFor="input" className="text-sm ml-1 text-green-950">Email</label>        
+    <div className="relative w-full mb-5 flex gap-3">   
+        <div>
+        <label htmlFor="input" className="text-sm ml-1 text-green-950">Firstname</label>
     <input type="text" className="w-full pl-3 pr-10 py-2 bg-transparent placeholder:text-slate-400 text-slate-600 text-sm border border-slate-200 rounded-md transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow" placeholder="email@gmail.com" />
+            </div>    
+            <div>
+               <label htmlFor="input" className="text-sm ml-1 text-green-950">Lastname</label>
+    <input type="text" className="w-full pl-3 pr-10 py-2 bg-transparent placeholder:text-slate-400 text-slate-600 text-sm border border-slate-200 rounded-md transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow" placeholder="email@gmail.com" />
+    </div>
+                </div>     
+
+  <div className="relative w-full">      
+    <label htmlFor="input" className="text-sm ml-1 text-green-950">Email</label>      
+    <input type="text" className="w-full pl-3 pr-10 py-2 bg-transparent placeholder:text-slate-400 text-slate-600 text-sm border border-slate-200 rounded-md transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow" placeholder="email@gmail.com" />
+ 
+   
 
   </div>
 </div>
@@ -27,7 +40,7 @@ export function Signin() {
                 className="w-full pl-3 pr-3 py-2 bg-transparent placeholder:text-slate-400 text-slate-600 text-sm border border-slate-200 rounded-md transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
                 placeholder="Your password"
               />
-              <p className="flex items-start mt-2 text-xs text-slate-400">
+              <p className="flex items-center mt-3 text-xs text-slate-400">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -47,12 +60,12 @@ export function Signin() {
           </div>
           <div className="text-center mt-5 w-full">
           <button className="rounded-md  bg-green-600 w-full py-2 px border border-transparent text-center text-sm text-white transition-all  hover:shadow-lg focus:bg-green-700 focus:shadow-none active:bg-green-700 hover:bg-green-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none hover:cursor-pointer " type="button">
-  Sing in
+  Sing up
 </button>
           </div>
-        <p className="text-sm mt-5 font-medium text-gray-700 ml-1">Not a User? <span className="text-blue-600 hover:text-blue-700 hover:underline underline-offset-2 hover:cursor-pointer" onClick={()=>{
-            navigate('/signup')
-        }}>Try Now</span></p>
+        <p className="text-sm mt-5 font-medium text-gray-700 ml-1" >already a User? <span className="text-blue-600 hover:text-blue-700 hover:underline underline-offset-2 hover:cursor-pointer" onClick={()=>{
+            navigate("/signIn")
+        }}>Sing in</span></p>
         </div>
       </div>
     </>

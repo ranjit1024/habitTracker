@@ -10,10 +10,7 @@ export function LandingPage() {
       <>
         <div className="bg-gray-50 font-mona p-5">
           <div>
-            <div className="flex items-center gap-3">
-              <img src={logo} alt="" height={40} width={40} />
-              <p className="text-[1.5rem] text-gray-900 font-medium">H-Track</p>
-            </div>
+            
 
             <div className="hero-conent relative flex items-center flex-col justify-center px-20 pt-20 pb-10">
               {/* <----adding incons ---------> */}
