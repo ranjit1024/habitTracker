@@ -46,10 +46,10 @@ export function LandingPage() {
             
               flex flex-col items-center  h-[100] pt-6 pb-2 font-[600] text-center  text-[#093125]"
               >
-                <p className=" z-1 relative text-7xl ">
+                <p className="  text-7xl ">
                   {" "}
                   {/* <div className="bg-[#cff709a9] h-6 w-93 -z-1  absolute right-25 bottom-5 "></div>{" "} */}
-                  <div className=" h-6 w-100 -z-1   top-2 -left-3 opacity-60 ">
+                  <div className=" h-6 w-100    top-2 -left-3 opacity-60 ">
                     {/* <img
                       width="50"
                       height="50"
@@ -60,7 +60,7 @@ export function LandingPage() {
                   Single platform to{" "}
                 </p>
 
-                <p className=" z-10 text-7xl  ">
+                <p className="  text-7xl  ">
                   {/* <div className="absolute -right-3 opacity-60 top-10 -z-1 ">
                     <img
                       width="30"
