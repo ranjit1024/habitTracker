@@ -73,8 +73,6 @@ export function LandingPage() {
                 </p>
               </div>
 
-        </div>
-
         <div
                
                 className="mx-10 font-mona bg-gray-50   text-center text-lg flex font-normal  text-green-950"
@@ -87,7 +85,7 @@ export function LandingPage() {
               </div>
 
 
-               {/* <div
+               <div
               
                
               >
@@ -100,7 +98,11 @@ export function LandingPage() {
                 >
                   Get Started
                 </motion.button>
-              </div> */}
+              </div>
+        </div>
+
+
+
         
 
         <div className=" pt-25 flex items-center flex-col justify-center font-mona">
