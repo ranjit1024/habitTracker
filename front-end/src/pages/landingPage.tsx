@@ -7,13 +7,15 @@ export function LandingPage() {
   const navigate = useNavigate();
   let arrya = ["M", "T", "W", "T", "F", "S", "S"];
   return (
-    <>
-      <>
-      <div className="bg-gray-50">
+  <div className="h-10">
+
+  
+  
+  <div className="bg-gray-50">
       <Logo/>
 
       </div>
-        <div className="bg-gray-50 font-mona p-5 h-[]">
+        <div className="bg-gray-50 font-mona p-5">
           
             
             <div className="hero-conent  flex items-center flex-col justify-center px-20 h-[70vh] pb-10 gap-5">
@@ -391,7 +393,6 @@ export function LandingPage() {
             </div>
           </footer>
         </div>
-      </>
-    </>
+      </div>
   );
 }
