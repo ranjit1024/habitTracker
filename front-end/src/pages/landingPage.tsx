@@ -44,27 +44,27 @@ export function LandingPage() {
               >
                 <p className="text-[5.4rem] z-1 relative ">
                   {" "}
-                  <div className="bg-[#cff709a9] h-6 w-93 -z-1  absolute right-25 bottom-5 "></div>{" "}
-                  <div className=" h-6 w-93 -z-1  absolute top-2 -left-3 opacity-60 ">
-                    <img
+                  {/* <div className="bg-[#cff709a9] h-6 w-93 -z-1  absolute right-25 bottom-5 "></div>{" "} */}
+                  <div className=" h-6 w-93 -z-1   top-2 -left-3 opacity-60 ">
+                    {/* <img
                       width="50"
                       height="50"
                       src="https://img.icons8.com/hands/100/positive-dynamic.png"
                       alt="positive-dynamic"
-                    />
+                    /> */}
                   </div>{" "}
                   Single platform to{" "}
                 </p>
 
-                <p className="-mt-7 z-10 text-[5.4rem] relative">
-                  <div className="absolute -right-3 opacity-60 top-10 -z-1 ">
+                <p className="-mt-7 z-10 text-[5.4rem] ">
+                  {/* <div className="absolute -right-3 opacity-60 top-10 -z-1 ">
                     <img
                       width="30"
                       height="50"
                       src="https://img.icons8.com/officel/50/goal.png"
                       alt="goal"
                     />
-                  </div>
+                  </div> */}
                   manage and track habits
                 </p>
               </motion.div>
