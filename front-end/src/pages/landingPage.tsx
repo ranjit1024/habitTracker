@@ -13,10 +13,10 @@ export function LandingPage() {
       <Logo/>
 
       </div>
-        <div className="bg-gray-50 font-mona p-5 h-10vh">
+        <div className="bg-gray-50 font-mona p-5 ">
           <div>
             
-            <div className="hero-conent relative flex items-center flex-col justify-center px-20 pt-12 pb-10">
+            <div className="hero-conent relative flex items-center flex-col justify-center px-20 pt-5 pb-10">
               {/* <----adding incons ---------> */}
 
               <div className="bg-white flex items-center gap-1 text-sm font-medium py-1 px-3 shadow-2xl border-1 border-gray-300 rounded-full">
@@ -92,7 +92,7 @@ export function LandingPage() {
                   delay: 0.8,
                   duration: 0.8,
                 }}
-                className="mx-10 mt-6 text-center text-[1.3rem] font-normal  text-green-950"
+                className="mx-10 z-10 mt-6 text-center text-[1.3rem] font-normal  text-green-950"
               >
                 <p>
                   H-Track helps you to take control and effectively track and
