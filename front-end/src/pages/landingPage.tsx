@@ -16,7 +16,7 @@ export function LandingPage() {
 
       </div>
               
-        <div className="bg-gray-50 font-mona p-5 hero-conent  flex flex-col justify-center px-20  pb-10 gap-5">
+        <div className="bg-gray-50 font-mona p-5   flex flex-col justify-center px-20  pb-10 gap-5">
                <div className="bg-white flex items-center  text-sm font-medium py-1 px-3 shadow-2xl border-1 border-gray-300 rounded-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +42,7 @@ export function LandingPage() {
             
               flex flex-col items-center  h-[100] pt-6 pb-2 font-[600] text-center  text-[#093125]"
               >
-                <p className="text-[5.4rem] z-1 relative ">
+                <p className=" z-1 relative ">
                   {" "}
                   {/* <div className="bg-[#cff709a9] h-6 w-93 -z-1  absolute right-25 bottom-5 "></div>{" "} */}
                   <div className=" h-6 w-93 -z-1   top-2 -left-3 opacity-60 ">
@@ -56,7 +56,7 @@ export function LandingPage() {
                   Single platform to{" "}
                 </p>
 
-                <p className="-mt-7 z-10 text-[5.4rem] ">
+                <p className="-mt-7 z-10  ">
                   {/* <div className="absolute -right-3 opacity-60 top-10 -z-1 ">
                     <img
                       width="30"
@@ -71,7 +71,7 @@ export function LandingPage() {
 
               <motion.div
                
-                className="mx-10   text-center text-[1.3rem] flex font-normal  text-green-950"
+                className="mx-10   text-center  flex font-normal  text-green-950"
               >
                 <p>
                   H-Track helps you to take control and effectively track and
