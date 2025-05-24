@@ -40,7 +40,7 @@ export function LandingPage() {
                 
                 className="
             
-              flex flex-col items-center  h-[100] pt-6  font-[600] text-center  text-[#093125]"
+              flex flex-col items-center  h-[100] pt-6 pb-2 font-[600] text-center  text-[#093125]"
               >
                 <p className="text-[5.4rem] z-1 relative ">
                   {" "}
@@ -68,6 +68,18 @@ export function LandingPage() {
                   manage and track habits
                 </p>
               </motion.div>
+
+              <motion.div
+               
+                className="mx-10   text-center text-[1.3rem] flex font-normal  text-green-950"
+              >
+                <p>
+                  H-Track helps you to take control and effectively track and
+                  manage the process of breaking bad habits or adopting new
+                  ones. Start your transformation today!
+                </p>
+              </motion.div>
+
 
               {/* <motion.div
                
