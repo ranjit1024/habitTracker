@@ -40,7 +40,7 @@ export function LandingPage() {
               </div>
               </div>
 
-                <motion.div
+                <div
                 
                 className="
             
@@ -71,9 +71,9 @@ export function LandingPage() {
                   </div> */}
                   manage and track habits
                 </p>
-              </motion.div>
+              </div>
 
-              <motion.div
+              <div
                
                 className="mx-10   text-center text-lg flex font-normal  text-green-950"
               >
@@ -82,10 +82,10 @@ export function LandingPage() {
                   manage the process of breaking bad habits or adopting new
                   ones. Start your transformation today!
                 </p>
-              </motion.div>
+              </div>
 
 
-               <motion.div
+               <div
               
                
               >
@@ -98,7 +98,7 @@ export function LandingPage() {
                 >
                   Get Started
                 </motion.button>
-              </motion.div>
+              </div>
 
 
               {/* <motion.div
