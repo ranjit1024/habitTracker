@@ -73,65 +73,35 @@ export function LandingPage() {
                 </p>
               </div>
 
-              <div
-               
-                className="mx-10   text-center text-lg flex font-normal  text-green-950"
-              >
-                <p>
-                  H-Track helps you to take control and effectively track and
-                  manage the process of breaking bad habits or adopting new
-                  ones. Start your transformation today!
-                </p>
-              </div>
-
-
-               <div
-              
-               
-              >
-                <motion.button
-                 
-                  onClick={() => {
-                    navigate("/signIn");
-                  }}
-                  className=" px-5 py-2 mt-5 text-white flex bg-[#21a510] hover:cursor-pointer  rounded-xl font-medium "
-                >
-                  Get Started
-                </motion.button>
-              </div>
-
-
-              {/* <motion.div
-               
-                className="mx-10   text-center text-[1.3rem] flex font-normal  text-green-950"
-              >
-                <p>
-                  H-Track helps you to take control and effectively track and
-                  manage the process of breaking bad habits or adopting new
-                  ones. Start your transformation today!
-                </p>
-              </motion.div>
-
-               <motion.div
-              
-               
-              >
-                <motion.button
-                 
-                  onClick={() => {
-                    navigate("/signIn");
-                  }}
-                  className=" px-5 py-2 mt-5 text-white flex bg-[#21a510] hover:cursor-pointer  rounded-xl font-medium "
-                >
-                  Get Started
-                </motion.button>
-              </motion.div>
-             */}
-   
-
-
-        
         </div>
+
+        <div
+               
+                className="mx-10 font-mona bg-gray-50   text-center text-lg flex font-normal  text-green-950"
+              >
+                <p>
+                  H-Track helps you to take control and effectively track and
+                  manage the process of breaking bad habits or adopting new
+                  ones. Start your transformation today!
+                </p>
+              </div>
+
+
+               {/* <div
+              
+               
+              >
+                <motion.button
+                 
+                  onClick={() => {
+                    navigate("/signIn");
+                  }}
+                  className=" px-5 py-2 mt-5 text-white flex bg-[#21a510] hover:cursor-pointer  rounded-xl font-medium "
+                >
+                  Get Started
+                </motion.button>
+              </div> */}
+        
 
         <div className=" pt-25 flex items-center flex-col justify-center font-mona">
           <div className="bg-white flex items-center gap-2 text-sm font-medium py-1 px-3 shadow-2xl border-1 border-gray-300 rounded-full">
