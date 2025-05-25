@@ -2,11 +2,12 @@ import Logo from "../assets/habit.png";
 import { Calendar } from "rsuite";
 import '../anoter.css'
 import { Completed } from "../components/completed";
+import { motion } from "motion/react";
 
 export function Main() {
   let arrya = ["M", "T", "W", "T", "F", "S", "S"];
   return (
-    <div className="bg-green-50 h-[100vh]  font-mona">
+    <div className="bg-green-50 h-[100%]  font-mona">
       <div className="flex justify-between px-3 py-3 ">
         <div className="flex items-center gap-1    ">
           <img src={Logo} alt="" height={30} width={30} />
@@ -25,7 +26,18 @@ export function Main() {
 
       <div className="px-10 py-10  mt-5  flex  justify-around ">
         <div>
-          <div
+          <motion.div
+          initial={{
+            x:-100,
+            opacity:0
+          }}
+          animate={{
+            x:0,
+            opacity:1
+          }}
+          transition={{
+            duration:0.8
+          }}
             className="pl-5 pr-10  bg-white rounded-xl shadow-sm w-[97%] h-fit mb-5"
             id="streak-manager"
           >
@@ -72,10 +84,22 @@ export function Main() {
                 ))}
               </div>
             </div>
-          </div>
-          <div
+          </motion.div>
+
+          <motion.div
+           initial={{
+            y:100,
+            opacity:0
+          }}
+          animate={{
+            y:0,
+            opacity:1
+          }}
+          transition={{
+            duration:0.8
+          }}
             className=" bg-white rounded-xl shadow-sm w-[97%] h-fit"
-            id="streak-manager "
+            
           >
             <div className="p-5">
               <p className="font-normal text-2xl text-black">Goal Progress</p>
@@ -96,11 +120,23 @@ export function Main() {
                 </span>
               </p>
             </div>
-          </div>
+          </motion.div>
+
         </div>
 
         <div>
-          <div
+          <motion.div
+           initial={{
+            x:100,
+            opacity:0
+          }}
+          animate={{
+            x:0,
+            opacity:1
+          }}
+          transition={{
+            duration:0.8
+          }}
             className="bg-white p-5 h-fit  shadow-sm flex flex-col items-center rounded-2xl"
             id="calnader"
           >
@@ -113,9 +149,21 @@ export function Main() {
             >
               <Calendar compact />
             </div>
-          </div>
+          </motion.div>
 
-          <div className="bg-white p-5 h-fit  shadow-sm   rounded-2xl mt-5">
+          <motion.div
+           initial={{
+            y:100,
+            opacity:0
+          }}
+          animate={{
+            y:0,
+            opacity:1
+          }}
+          transition={{
+            duration:0.8
+          }}
+          className="bg-white p-5 h-fit  shadow-sm   rounded-2xl mt-5">
             <p className="font-medium text-[1rem] text-center text-gray-800">All Selected Habits: Your Path to <span className="text-lg text-green-600 font-medium">Transformation!</span></p>
 
             <div className="mt-5 p-3 ">
@@ -130,7 +178,8 @@ export function Main() {
             
             </div>
 
-          </div>
+          </motion.div>
+
         </div>
       </div>
     </div>
