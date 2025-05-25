@@ -4,7 +4,7 @@ import { Signin } from "./pages/signIn";
 import { LandingPage } from "./pages/landingPage";
 import { SignUp } from "./pages/singup";
 import { Main } from "./pages/main";
-
+import { Add } from "./pages/habit";
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
         <Route path="/signIn" element={<Signin />}></Route>
         <Route path="/signup" element={<SignUp />}></Route>
         <Route path="/main" element={<Main />}></Route>
+        <Route path="/habits" element={<Add />}></Route>
       </Routes>
     </BrowserRouter>
   );

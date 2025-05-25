@@ -35,8 +35,8 @@ export function Main() {
           }}
           transition={{
             duration:0.8
-          }}  className="flex relative top-8 -left-3 justify-end px-10 p" >
-      <button className="  !text-green-500 !text-[1rem] hover:underline underline-offset-3 !rounded-xl !font-medium active:scale-101">Start / Break Habit</button>
+          }}  className="flex relative top-12 -left-3 justify-end px-10 p" >
+      <button className="  !text-green-500 !text-[1rem] underline-offset-3 !rounded-xl !font-medium active:scale-101"> <span className="hover:text-lime-400">Start</span> / <span className="hover:text-red-500"> Break Habit</span></button>
       </motion.div>
 
       <div className="px-10 py-10  mt-5  flex  justify-around ">

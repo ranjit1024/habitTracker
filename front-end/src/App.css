@@ -8,3 +8,11 @@
   --color-pColor:"#14a901",
   --
 }
+
+.calendar-todo-item-badge {
+  vertical-align: top;
+  margin-top: 8px;
+  width: 2px;
+  height: 2px;
+  border-radius: 10px;
+}  
