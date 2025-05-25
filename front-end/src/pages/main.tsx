@@ -1,20 +1,18 @@
 import Logo from "../assets/habit.png";
-import { useState } from "react";
-import { Calendar, Badge, List, HStack } from 'rsuite';
+;
+import { Calendar, } from 'rsuite';
 
 
 
 
 export function Main() {
-   const [selectedDate, setSelectedDate] = useState(null);
+   
 
-  const handleSelect = (date:any) => {
-    setSelectedDate(date);
-  };
+ 
       let arrya = ["M", "T", "W", "T", "F", "S", "S"];
   return (
    
-    <div className="not-visited:bg-gray-50 h-[100vh]  font-mona">
+    <div className="bg-green-50 h-[100vh]  font-mona">
  
 
     <div className="flex justify-between px-3 py-3 ">
