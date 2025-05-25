@@ -35,7 +35,19 @@ export function LandingPage() {
           </div>
         </div>
 
-        <div
+        <motion.div
+          initial={{
+            y:50,
+            opacity:0,
+          }}
+          animate={{
+            y:0,
+            opacity:1,
+          }}
+          transition={{
+            duration:0.5
+          }}
+
           className="
             
               flex flex-col  items-center relative  h-[100%] pt-6 pb-2 font-[600] text-center  text-[#093125]"
@@ -50,17 +62,28 @@ export function LandingPage() {
           <p className="  text-[5rem] z-2 "> Single platform to </p>
 
           <p className="  text-[5rem]  -mt-5 z-2 ">manage and track habits</p>
-        </div>
+        </motion.div>
 
-        <div className="mx-10 font-mona bg-gray-50   text-center text-lg flex font-normal  text-green-950">
+        <motion.div  initial={{
+            y:50,
+            opacity:0
+          }}
+          animate={{
+            y:0,
+            opacity:1,
+          }}
+          transition={{
+            duration:0.5
+          }} 
+          className="mx-10 font-mona bg-gray-50   text-center text-lg flex font-normal  text-green-950">
           <p>
             H-Track helps you to take control and effectively track and manage
             the process of breaking bad habits or adopting new ones. Start your
             transformation today!
           </p>
-        </div>
+        </motion.div>
 
-        <div>
+        <div >
           <motion.button
             onClick={() => {
               navigate("/signIn");

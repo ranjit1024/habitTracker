@@ -21,7 +21,7 @@ export function Main() {
     </div>
 
     <div>
-      streak
+      streak 
     </div>
 
      
