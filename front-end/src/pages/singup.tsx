@@ -16,7 +16,7 @@ export function SignUp() {
         </div>
         <div className="bg-white flex flex-col px-7 py-10 rounded-md  w-[50%] ">
             
-        <p className="text-center mb-5 text-[1.7rem] text-[#111c1d] font-medium">Sign Up</p>    
+        <p className="text-center !mb-5 text-[1.7rem] text-[#111c1d] font-medium">Sign Up</p>    
     <div className="w-full mb-5">
     <div className="relative w-full mb-5 flex gap-3">   
         <div>
@@ -71,7 +71,7 @@ export function SignUp() {
           </div>
         <p className="text-sm !mt-5 font-medium text-gray-700 ml-1" >already a User? <span className="text-blue-600 hover:text-blue-700 hover:underline underline-offset-2 hover:cursor-pointer" onClick={()=>{
             navigate("/signIn")
-        }}>Sing in</span></p>
+        }}>Sign in</span></p>
         </div>
       </div>
     </>

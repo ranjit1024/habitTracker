@@ -89,8 +89,14 @@ export function LandingPage() {
             onClick={() => {
               navigate("/signIn");
             }}
+            whileHover={{
+              scale:1.1
+            }}
+            transition={{
+              duration:0.8
+            }}
             className=" !px-6 
-            !py-2 !mt-5 !text-white flex bg-[#21a510] hover:cursor-pointer   !font-medium !rounded-xl"
+            !py-2 !mt-5 !text-white flex bg-[#21a510] hover:cursor-pointer   !font-medium !rounded-xl !text-[1rem] "
           
           >
             Get Started
