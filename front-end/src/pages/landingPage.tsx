@@ -61,7 +61,7 @@ export function LandingPage() {
           </div>
           <p className="  text-[5rem] z-2 "> Single platform to </p>
 
-          <p className="  text-[5rem]  -mt-5 z-2 ">manage and track habits</p>
+          <p className="  text-[5rem]  !-mt-4 z-2 ">manage and track habits</p>
         </motion.div>
 
 

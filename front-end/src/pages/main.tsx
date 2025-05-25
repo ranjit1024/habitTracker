@@ -1,6 +1,8 @@
 import Logo from "../assets/habit.png";
 import { Calendar } from "rsuite";
 import '../anoter.css'
+import { Completed } from "../components/completed";
+
 export function Main() {
   let arrya = ["M", "T", "W", "T", "F", "S", "S"];
   return (
@@ -113,8 +115,20 @@ export function Main() {
             </div>
           </div>
 
-          <div className="bg-white p-5 h-fit  shadow-sm flex flex-col items-center rounded-2xl mt-5">
-            <p className="font-medium text-[1rem] text-gray-800">All Selected Habits: Your Path to <span className="text-lg text-green-600 font-medium">Transformation!</span></p>
+          <div className="bg-white p-5 h-fit  shadow-sm   rounded-2xl mt-5">
+            <p className="font-medium text-[1rem] text-center text-gray-800">All Selected Habits: Your Path to <span className="text-lg text-green-600 font-medium">Transformation!</span></p>
+
+            <div className="mt-5 p-3 ">
+              
+                <Completed/>
+                <Completed/>
+                <Completed/>
+            
+                
+             
+              
+            
+            </div>
 
           </div>
         </div>
