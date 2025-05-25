@@ -3,6 +3,7 @@ import { Calendar } from "rsuite";
 import '../anoter.css'
 import { Completed } from "../components/completed";
 import { motion } from "motion/react";
+import "rsuite/dist/rsuite.css";
 
 export function Main() {
   let arrya = ["M", "T", "W", "T", "F", "S", "S"];
@@ -35,11 +36,14 @@ export function Main() {
           }}
           transition={{
             duration:0.8
-          }}  className="flex relative top-12 -left-3 justify-end px-10 p" >
+          }}  className="flex relative top-3 -left-3 justify-end px-10 p" >
       <button className="  !text-green-500 !text-[1rem] underline-offset-3 !rounded-xl !font-medium active:scale-101"> <span className="hover:text-lime-400">Start</span> / <span className="hover:text-red-500"> Break Habit</span></button>
       </motion.div>
 
-      <div className="px-10 py-10  mt-5  flex  justify-around ">
+
+
+      <div className="px-10   mt-5  flex   justify-around ">
+          
         <div>
           <motion.div
           initial={{
@@ -53,8 +57,8 @@ export function Main() {
           transition={{
             duration:0.8
           }}
-            className="pl-5 pr-10 py-3  bg-white rounded-xl shadow-sm w-[97%] h-fit mb-5"
-            id="streak-manager"
+          className="pl-5 pr-10 py-3  bg-white rounded-xl shadow-sm w-[97%] h-fit mb-5"
+          id="streak-manager"
           >
             <div className="flex flex-col">
               <div className="flex items-center text-start gap-2 mb-2 -ml-1 justify-start ">
