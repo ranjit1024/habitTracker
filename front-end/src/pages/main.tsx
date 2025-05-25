@@ -15,6 +15,7 @@ export function Main() {
         </div>
 
         <div className="hover:cursor-pointer hover:scale-105 active:bg-green-100 rounded-2xl">
+  
           <img
             width="32"
             height="48"
@@ -23,6 +24,20 @@ export function Main() {
           />
         </div>
       </div>
+
+      <motion.div    initial={{
+            y:100,
+            opacity:0
+          }}
+          animate={{
+            y:0,
+            opacity:1
+          }}
+          transition={{
+            duration:0.8
+          }}  className="flex relative top-8 -left-3 justify-end px-10 p" >
+      <button className="  !text-green-500 !text-[1rem] hover:underline underline-offset-3 !rounded-xl !font-medium active:scale-101">Start / Break Habit</button>
+      </motion.div>
 
       <div className="px-10 py-10  mt-5  flex  justify-around ">
         <div>
@@ -38,7 +53,7 @@ export function Main() {
           transition={{
             duration:0.8
           }}
-            className="pl-5 pr-10  bg-white rounded-xl shadow-sm w-[97%] h-fit mb-5"
+            className="pl-5 pr-10 py-3  bg-white rounded-xl shadow-sm w-[97%] h-fit mb-5"
             id="streak-manager"
           >
             <div className="flex flex-col">
@@ -49,7 +64,7 @@ export function Main() {
                   src="https://img.icons8.com/plasticine/100/medal2-1.png"
                   alt="medal2-1"
                 />
-                <div>
+                <div className="flex flex-col items-start justify-center mt-2">
                   <p className="text-5xl font-semibold mb-1 text-neutral-600">
                     19
                   </p>
