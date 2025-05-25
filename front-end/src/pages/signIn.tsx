@@ -32,12 +32,12 @@ export function Signin() {
                 className="w-full pl-3 pr-3 py-2 bg-transparent placeholder:text-slate-400 text-slate-600 text-sm border border-slate-200 rounded-md transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
                 placeholder="Your password"
               />
-              <p className="flex items-start mt-2 text-xs text-slate-400">
+              <p className="flex items-center !mt-3 text-xs text-slate-400">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  className="w-5 h-5 mr-1.5"
+                  className="w-5 h-5 !mr-1.5"
                 >
                   <path
                     fill-rule="evenodd"
@@ -51,11 +51,11 @@ export function Signin() {
             </div>
           </div>
           <div className="text-center mt-5 w-full">
-          <button className="rounded-md  bg-[#21a510] w-full py-2 px border border-transparent text-center text-sm text-white transition-all  hover:shadow-lg focus:bg-green-700 focus:shadow-none active:bg-green-700 hover:bg-green-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none hover:cursor-pointer " type="button">
+          <button className="!rounded-md  bg-[#21a510] w-full  py-2 px border border-transparent text-center !text-sm !text-white transition-all  hover:shadow-lg focus:bg-green-700 focus:shadow-none active:bg-green-700 hover:bg-green-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none hover:cursor-pointer " type="button">
   Sing in
 </button>
           </div>
-        <p className="text-sm mt-5 font-medium text-gray-700 ml-1">Not a User? <span className="text-blue-600 hover:text-blue-700 hover:underline underline-offset-2 hover:cursor-pointer" onClick={()=>{
+        <p className="text-sm !mt-5 font-medium text-gray-700 ml-1">Not a User? <span className="text-blue-600 hover:text-blue-700 hover:underline underline-offset-2 hover:cursor-pointer" onClick={()=>{
             navigate('/signup')
         }}>Try Now</span></p>
         </div>

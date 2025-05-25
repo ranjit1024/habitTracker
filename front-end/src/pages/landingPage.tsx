@@ -3,6 +3,7 @@ import calander from "../assets/calander.png";
 import { motion } from "motion/react";
 import { useNavigate } from "react-router-dom";
 import { Logo } from "../components/logo";
+
 export function LandingPage() {
   const navigate = useNavigate();
   let arrya = ["M", "T", "W", "T", "F", "S", "S"];
@@ -34,7 +35,6 @@ export function LandingPage() {
             <p className="text-green-800">Track for best</p>
           </div>
         </div>
-
         <motion.div
           initial={{
             y:50,
@@ -64,6 +64,7 @@ export function LandingPage() {
           <p className="  text-[5rem]  -mt-5 z-2 ">manage and track habits</p>
         </motion.div>
 
+
         <motion.div  initial={{
             y:50,
             opacity:0
@@ -88,7 +89,9 @@ export function LandingPage() {
             onClick={() => {
               navigate("/signIn");
             }}
-            className=" px-5 py-2 mt-5 text-white flex bg-[#21a510] hover:cursor-pointer  rounded-xl font-medium "
+            className=" !px-6 
+            !py-2 !mt-5 !text-white flex bg-[#21a510] hover:cursor-pointer   !font-medium !rounded-xl"
+          
           >
             Get Started
           </motion.button>
@@ -132,9 +135,9 @@ export function LandingPage() {
             once: true,
             amount: 0.4,
           }}
-          className="pt-6 pb-20  flex items-center justify-center text-center px-60 flex-col "
+          className="pt-6 !pb-20  flex items-center justify-center text-center px-60 flex-col "
         >
-          <p className="leading-16 text-green-950 text-[3rem] text-center  font-medium">
+          <p className="!leading-16 text-green-950 text-[3rem] text-center  font-medium">
             Adapt good habits and break bad ones using a scientific way
           </p>
           <p className="pt-7 text-green-950 text-[1.2rem]  font-normal">
@@ -164,11 +167,11 @@ export function LandingPage() {
           className="bg-[#f1f4f1] mt-10 w-[90%]  rounded-xl p-6 flex flex-col md:flex-row items-start md:items-center justify-between shadow-sm"
         >
           {/* Text Section */}
-          <div className=" mb-10 px-5 w-70%">
+          <div className="!mb-10 !px-5 !w-70%">
             <h2 className="text-2xl font-semibold text-gray-900 mb-2">
               Track Progress
             </h2>
-            <p className="text-gray-700 text-[1.2rem] mb-10 mt-4 pr-10">
+            <p className="text-gray-700 text-[1.2rem] !mb-10 !mt-4 !pr-10">
               H-Track enables you to track your progress with precision,
               empowering you to break bad habits and adopt good ones. This is
               essential for achieving your personal growth and success.
@@ -177,7 +180,7 @@ export function LandingPage() {
               onClick={() => {
                 navigate("/signIn");
               }}
-              className="bg-green-700 hover:cursor-pointer hover:bg-green-800 text-white px-5 py-2 rounded-md shadow-md mt-10"
+              className="!bg-green-700 hover:cursor-pointer hover:bg-green-800 !text-white !px-5 !py-2 !rounded-md shadow-md !mt-10"
             >
               Explore all
             </button>
@@ -331,7 +334,7 @@ export function LandingPage() {
             whileHover={{
               scale: 1.04,
             }}
-            className="px-10 py-3 font-medium text-gray-900 hover:cursor-pointer bg-[#e1fa6d] rounded-2xl"
+            className="px-10 py-3 font-medium text-gray-900 hover:cursor-pointer bg-[#e1fa6d] !rounded-2xl"
           >
             Explore H-Track
           </motion.button>
