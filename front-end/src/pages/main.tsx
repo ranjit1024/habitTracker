@@ -5,7 +5,7 @@ import Logo from "../assets/habit.png";
 export function Main() {
      
   return (
-    <>
+   
     <div className="">
     <div className="flex justify-between gap-10 w-[100vw]">
 
@@ -20,8 +20,12 @@ export function Main() {
 
     </div>
 
+    <div>
+      streak
+    </div>
+
      
     </div>
-    </>
+   
   );
 }
