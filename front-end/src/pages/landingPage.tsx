@@ -50,18 +50,18 @@ export function LandingPage() {
 
           className="
             
-              flex flex-col  items-center relative  h-[100%] pt-6 pb-2 font-[600] text-center  text-[#093125]"
+              flex flex-col max-md:w-[100vw]   items-center relative  h-[100%] pt-6 pb-2 font-[600] text-center   text-[#093125]"
         >
-          <div className="absolute bottom-14 opacity-60 -right-3  ">
-            <img width="40" height="50" src="https://img.icons8.com/officel/50/goal.png" alt="goal"/>
+          <div className="absolute bottom-14 opacity-60 -right-3 max-md:bottom-8 max-md:right-35 ">
+            <img width="40" height="50" src="https://img.icons8.com/officel/50/goal.png" className="max-md:size-7" alt="goal"/>
           </div>
-          <div className="absolute bottom-14 opacity-50 top-11 left-32   ">
-              <img width="48" height="48" src="https://img.icons8.com/pulsar-gradient/48/financial-growth.png" alt="financial-growth"/>
+          <div className="absolute max-md:left-0 max-md:top-6 bottom-14 opacity-50 top-11 left-32   ">
+              <img width="48" height="48" src="https://img.icons8.com/pulsar-gradient/48/financial-growth.png" className="max-md:size-9" alt="financial-growth"/>
             
           </div>
-          <p className="  text-[5rem] z-2 "> Single platform to </p>
+          <p className="max-md:text-[3rem] text-[5rem] z-2 "> Single platform to </p>
 
-          <p className="  text-[5rem]  !-mt-4 z-2 ">manage and track habits</p>
+          <p className="max-md:text-[2.7rem]  text-[5rem]  !-mt-4 z-2 ">manage and track habits</p>
         </motion.div>
 
 
@@ -76,7 +76,7 @@ export function LandingPage() {
           transition={{
             duration:0.5
           }} 
-          className="mx-10 font-mona bg-gray-50   text-center text-lg flex font-normal  text-green-950">
+          className="mx-10 font-mona bg-gray-50 max-md:w-[100vw]  text-center text-lg flex font-normal  text-green-950">
           <p>
             H-Track helps you to take control and effectively track and manage
             the process of breaking bad habits or adopting new ones. Start your
@@ -141,9 +141,9 @@ export function LandingPage() {
             once: true,
             amount: 0.4,
           }}
-          className="pt-6 !pb-20  flex items-center justify-center text-center px-60 flex-col "
+          className="pt-6 !pb-20  flex max-md:px-0 max-md:m-2 items-center justify-center text-center px-60 flex-col "
         >
-          <p className="!leading-16 text-green-950 text-[3rem] text-center  font-medium">
+          <p className="!leading-16 max-md:w[100vw]  text-green-950 text-[3rem] text-center  font-medium">
             Adapt good habits and break bad ones using a scientific way
           </p>
           <p className="pt-7 text-green-950 text-[1.2rem]  font-normal">
@@ -236,13 +236,13 @@ export function LandingPage() {
                 src="https://img.icons8.com/plasticine/100/medal2-1.png"
                 alt="medal2-1"
               />
-              <div className="bg-white   flex items-center justify-center gap-6  py-[3%] px-5 mx-2 w-[100%]">
+              <div className="bg-white    flex items-center justify-center gap-6 max-md:gap-3  py-[3%] px-5 mx-2 w-[100%]">
                 {arrya.map((item) => (
-                  <div>
-                    <div className="text-center mb-3 font-bold text-xl text-gray-800/50">
+                  <div className="">
+                    <div className="text-center  mb-3 font-bold text-xl text-gray-800/50">
                       {item}
                     </div>
-                    <div className="w-10 h-10 bg-[#fd9503] rounded-full flex items-center justify-center  ">
+                    <div className="w-10 h-10 max-md:w-10 max-md:h-10 bg-[#fd9503] rounded-full flex items-center justify-center  ">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -277,7 +277,7 @@ export function LandingPage() {
                 <p className="text-green-950 text-center text-[1.6rem] font-semibold">
                   Dynamic Dashboard
                 </p>
-                <p className={`mt-5 text-[1.1rem]  text-gray-950`}>
+                <p className={`mt-5 text-[1.1rem]  text-gray-950 `}>
                   H-Track provides a dynamic dashboard that allows you to
                   monitor your progress and take appropriate action.
                 </p>
@@ -291,8 +291,8 @@ export function LandingPage() {
         </motion.div>
       </div>
 
-      <div className="bg-[#273f3c]  p-10 mt-25 font-mona flex items-center justify-between">
-        <div className="text-white text-[2.7rem] font-medium w-200">
+      <div className="bg-[#273f3c]  p-10 mt-25 font-mona flex items-center justify-between max-md:flex-col ">
+        <div className="text-white text-[2.7rem] font-medium w-200 max-md:w-[100vw]">
           <motion.p
             initial={{
               x: -100,
@@ -312,8 +312,8 @@ export function LandingPage() {
             }}
             className="relative"
           >
-            <div className="absolute bg-[#e1fa6d] h-1 w-34 bottom-2 -left-1"></div>
-            It's time to become addicted to new habits.
+            <div className="absolute bg-[#e1fa6d] h-1 w-34 bottom-2 -left-1 max-md:text-2xl"></div>
+            <p className="max-md:p-1">It's time to become addicted to new habits.</p>
           </motion.p>
         </div>
         <div>

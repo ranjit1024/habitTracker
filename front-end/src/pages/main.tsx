@@ -8,7 +8,7 @@ import "rsuite/dist/rsuite.css";
 export function Main() {
   let arrya = ["M", "T", "W", "T", "F", "S", "S"];
   return (
-    <div className="bg-green-50 h-[100%]  font-mona">
+    <div className="bg-green-50 h-[100%] max-md:w-[100vw] max-md:flex max-md:flex-col max-md:flex-wrap font-mona">
       <div className="flex justify-between px-3 py-3 ">
         <div className="flex items-center gap-1    ">
           <img src={Logo} alt="" height={30} width={30} />
@@ -36,13 +36,13 @@ export function Main() {
           }}
           transition={{
             duration:0.8
-          }}  className="flex relative top-3 -left-3 justify-end px-10 p" >
+          }}  className="flex relative top-3 -left-3 justify-end px-10 max-md:px-1 " >
       <button className="  !text-green-500 !text-[1rem] underline-offset-3 !rounded-xl !font-medium active:scale-101"> <span className="hover:text-lime-400">Start</span> / <span className="hover:text-red-500"> Break Habit</span></button>
       </motion.div>
 
 
 
-      <div className="px-10   mt-5  flex   justify-around ">
+      <div className="px-10 max-md:px-1 max-md:justify-center max-md:w-[100vw] max-md:items-center max-md:flex-wrap  mt-5  flex   justify-around ">
           
         <div>
           <motion.div
@@ -57,7 +57,7 @@ export function Main() {
           transition={{
             duration:0.8
           }}
-          className="pl-5 pr-10 py-3  bg-white rounded-xl shadow-sm w-[97%] h-fit mb-5"
+          className="pl-5 pr-10 py-3 max-md:w-[100vw]  bg-white rounded-xl shadow-sm w-[97%] h-fit mb-5 "
           id="streak-manager"
           >
             <div className="flex flex-col">
@@ -77,7 +77,7 @@ export function Main() {
                   </p>
                 </div>
               </div>
-              <div className="bg-white  p-4 flex gap-10 ">
+              <div className="bg-white  p-4 flex gap-10 max-md:gap-4 ">
                 {arrya.map((item) => (
                   <div>
                     <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center border-2 border-green-400 ">
@@ -117,7 +117,7 @@ export function Main() {
           transition={{
             duration:0.8
           }}
-            className=" bg-white rounded-xl shadow-sm w-[97%] h-fit"
+            className=" bg-white max-md:mb-5 rounded-xl shadow-sm w-[97%] max-md:m-2 h-fit"
             
           >
             <div className="p-5">
