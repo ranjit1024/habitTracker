@@ -63,7 +63,7 @@ export function Main() {
           <div className="flex justify-between">
             <div className="flex items-center gap-3">
 
-            <div className="bg-green-500/70 p-1 rounded-full  w-[0.5rem] h-[0.5rem] "></div>
+            <div className="bg-green-500/70 animate-pulse p-1 rounded-full  w-[0.5rem] h-[0.5rem] "></div>
             <p className="font-semibold text-neutral-600">Habit Name</p>
             </div>
             <div>
