@@ -1,5 +1,5 @@
 import Logo from "../assets/habit.png";
-import { Calendar } from "rsuite";
+import { Calendar, Checkbox } from "rsuite";
 import '../anoter.css'
 import { Completed } from "../components/completed";
 import { motion } from "motion/react";
@@ -37,14 +37,41 @@ export function Main() {
           transition={{
             duration:0.8
           }}  className="flex relative top-3 -left-3 justify-end px-10 max-md:px-1 " >
-      <button className="  !text-green-500 !text-[1rem] underline-offset-3 !rounded-xl !font-medium active:scale-101"> <span className="hover:text-lime-400">Start</span> / <span className="hover:text-red-500"> Break Habit</span></button>
+      <button className="  !text-green-500 !text-[1rem] underline-offset-3 !rounded-xl !font-medium active:scale-101"> <span className="hover:text-lime-400">Follow</span> / <span className="hover:text-red-500"> Break Habit</span></button>
       </motion.div>
 
 
 
       <div className="px-10 max-md:px-1 max-md:justify-center max-md:w-[100vw] max-md:items-center max-md:flex-wrap  mt-5  flex   justify-around ">
           
+    
         <div>
+          <motion.div 
+            initial={{
+            y:-100,
+            opacity:0
+          }}
+          animate={{
+            y:0,
+            opacity:1
+          }}
+          transition={{
+            duration:0.8
+          }}
+          className="pl-5 pr-10 py-3 max-md:w-[100vw] max-md:mt-4  bg-white rounded-xl shadow-sm w-[97%] h-fit mb-5">
+          <p className="text-xl  pb-3">Current Habit</p>
+          <div className="flex justify-between">
+            <div className="flex items-center gap-3">
+
+            <div className="bg-green-500/70 p-1 rounded-full  w-[0.5rem] h-[0.5rem] "></div>
+            <p className="font-semibold text-neutral-600">Habit Name</p>
+            </div>
+            <div>
+              <Checkbox className="font-medium">Follwed</Checkbox>
+            </div>
+          </div>
+          </motion.div>
+
           <motion.div
           initial={{
             x:-100,
