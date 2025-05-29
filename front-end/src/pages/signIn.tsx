@@ -1,4 +1,3 @@
-
 import { useNavigate } from "react-router-dom";
 import { Logo } from "../components/logo";
 export function Signin() {
@@ -9,6 +8,7 @@ export function Signin() {
         <Logo/>
         
         </div>
+  
       <div className="h-[100vh]  flex justify-between items-center font-mona">
         <div className="w-[60%] max-md:hidden h-full bg-center bg-cover bg-no-repeat bg-[url(https://cdn.leonardo.ai/users/a2f14ac8-df2c-4da0-aef1-7ecf6e45fdce/generations/88e56ba9-28c3-4342-93a6-cceca41e354a/Leonardo_Phoenix_10_A_visually_appealing_onemonth_calendar_wit_0.jpg)]">
 
@@ -58,6 +58,7 @@ export function Signin() {
         <p className="text-sm !mt-5 font-medium text-gray-700 ml-1">Not a User? <span className="text-blue-600 hover:text-blue-700 hover:underline underline-offset-2 hover:cursor-pointer" onClick={()=>{
             navigate('/signup')
         }}>Try Now</span></p>
+      
         </div>
       </div>
     </>

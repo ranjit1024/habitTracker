@@ -1,7 +1,4 @@
 import { Hono } from 'hono'
-import { PrismaClient } from '@prisma/client/edge'
-import { withAccelerate } from '@prisma/extension-accelerate'
-import { Jwt  } from 'hono/utils/jwt'
 import { userrouter } from './routes'
 
 const app = new Hono<{

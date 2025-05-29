@@ -1,12 +1,16 @@
 
 import { useNavigate } from "react-router-dom";
 import { Logo } from "../components/logo";
+import { Loader } from "../components/Loader";
+import { useState } from "react";
 export function SignUp() {
   const navigate = useNavigate();
+  const [isLoading,setIsLoading] = useState<boolean>(false)
   return (
     <>
     <div className="absolute">
     <Logo/>
+    { isLoading ? <Loader/>:null}
     
     </div>
       <div className="h-[100vh]  flex justify-between items-center font-mona">
@@ -65,12 +69,16 @@ export function SignUp() {
             </div>
           </div>
           <div className="text-center mt-5 w-full">
-          <button className="!rounded-md  bg-[#21a510] w-full !py-2 px border border-transparent text-center text-sm !text-white transition-all  hover:shadow-lg focus:bg-green-700 focus:shadow-none active:bg-green-700 hover:bg-green-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none hover:cursor-pointer " type="button">
+          <button className="!rounded-md  bg-[#21a510] w-full !py-2 px border border-transparent text-center text-sm !text-white transition-all  hover:shadow-lg focus:bg-green-700 focus:shadow-none active:bg-green-700 hover:bg-green-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none hover:cursor-pointer " type="button" onClick={()=>{
+            setIsLoading(!isLoading)
+          }}>
+          
   Sing up
 </button>
           </div>
         <p className="text-sm !mt-5 font-medium text-gray-700 ml-1" >already a User? <span className="text-blue-600 hover:text-blue-700 hover:underline underline-offset-2 hover:cursor-pointer" onClick={()=>{
             navigate("/signIn")
+            
         }}>Sign in</span></p>
         </div>
       </div>
