@@ -1,13 +1,15 @@
 import Logo from "../assets/habit.png";
-import { Calendar, Checkbox } from "rsuite";
-import '../anoter.css'
+
 import { Completed } from "../components/completed";
 import { motion } from "motion/react";
-import "rsuite/dist/rsuite.css";
+
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { Calendar } from "@/components/ui/calendar"
 
 export function Main() {
+  const [date, setDate] = useState<Date | undefined>(new Date());
+  
   let arrya = ["M", "T", "W", "T", "F", "S", "S"];
   const navigate = useNavigate();
   if(!localStorage.getItem('token')){
@@ -75,7 +77,8 @@ export function Main() {
             <p className="font-semibold text-neutral-600">Habit Name</p>
             </div>
             <div>
-              <Checkbox className="font-medium">Follwed</Checkbox>
+              <p>Followed</p>
+              <input type="checkbox"></input>
             </div>
           </div>
           </motion.div>
@@ -178,7 +181,7 @@ export function Main() {
 
         </div>
 
-        <div>
+        <div className="w-[50%]">
           <motion.div
            initial={{
             x:100,
@@ -191,17 +194,11 @@ export function Main() {
           transition={{
             duration:0.8
           }}
-            className="bg-white p-5 h-fit  shadow-sm flex flex-col items-center rounded-2xl"
+            className="bg-white p-5 h-fit   shadow-sm flex flex-col items-center rounded-2xl"
             id="calnader"
           >
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <Calendar compact />
+            <div>
+              kljh
             </div>
           </motion.div>
 
