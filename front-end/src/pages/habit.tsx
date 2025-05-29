@@ -1,11 +1,12 @@
 import Logo from "../assets/habit.png";
 import "../App.css"
-
+import 'rsuite/dist/rsuite.min.css'; 
+import { DateRangePicker } from "rsuite";
 
 export function Add() {
   return (
     <div className="bg-green-50 h-[100vh] max-md:w-[100vw] max-md:h-[100%] font-mona ">
-      <div className="flex justify-between px-3 py-3 ">
+       <div className="flex justify-between px-3 py-3 ">
         <div className="flex items-center gap-1    ">
           <img src={Logo} alt="" height={30} width={30} />
           <p className="text-[1.2rem] text-gray-900 font-medium">H-Track</p>
@@ -42,6 +43,14 @@ export function Add() {
           </div>
           
       <div className="w-fit max-md:w-fit max-lg:flex max-lg:justify-center">
+            <DateRangePicker size="md" onOk={(e)=>{
+              console.log(e)
+            
+            }} shouldDisableDate={(date:Date)=>{
+                const today = new Date();
+                today.setHours(0,0,0,0);
+                return date < today
+            }}/>
      
       </div>
       <div className="w-fit">
@@ -51,7 +60,7 @@ export function Add() {
      
         </div>
 
-      </div>
+      </div> 
 
     </div>
   );

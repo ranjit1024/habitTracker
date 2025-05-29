@@ -4,6 +4,7 @@ import { Completed } from "../components/completed";
 import { motion } from "motion/react";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import CustomCalendar from "../components/calander";
 
 
 export function Main() {
@@ -194,11 +195,11 @@ export function Main() {
           transition={{
             duration:0.8
           }}
-            className="bg-white p-5 h-fit   shadow-sm flex flex-col items-center rounded-2xl"
+            className="bg-white  h-fit w-[100%]  shadow-sm flex flex-col items-center rounded-2xl"
             id="calnader"
           >
-            <div>
-              
+            <div className="w-[100%] h-[100%]">
+              <CustomCalendar/>
             </div>
           </motion.div>
 
