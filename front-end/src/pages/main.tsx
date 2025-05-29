@@ -1,11 +1,11 @@
 import Logo from "../assets/habit.png";
-
+import { Calendar } from "@/components/ui/calendar";
 import { Completed } from "../components/completed";
 import { motion } from "motion/react";
-
+import {Checkbox} from "rsuite"
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Calendar } from "@/components/ui/calendar"
+
 
 export function Main() {
   const [date, setDate] = useState<Date | undefined>(new Date());
@@ -52,7 +52,7 @@ export function Main() {
 
 
 
-      <div className="px-10 max-md:px-1 max-md:justify-center max-md:w-[100vw] max-md:items-center max-md:flex-wrap  mt-5  flex   justify-around ">
+      <div className="px-10  max-md:px-1 max-md:justify-center max-md:w-[100vw] max-md:items-center max-md:flex-wrap  mt-5  flex   justify-around ">
           
     
         <div>
@@ -68,17 +68,18 @@ export function Main() {
           transition={{
             duration:0.8
           }}
-          className="pl-5 pr-10 py-3 max-md:w-[100vw] max-md:mt-4  bg-white rounded-xl shadow-sm w-[97%] h-fit mb-5">
+          className="pl-5 pr-10 py-5 max-md:w-[100vw] max-md:mt-4  bg-white rounded-xl shadow-sm w-[97%] h-fit mb-5">
           <p className="text-xl  pb-3">Current Habit</p>
           <div className="flex justify-between">
             <div className="flex items-center gap-3">
+             
 
             <div className="bg-green-500/70 animate-pulse p-1 rounded-full  w-[0.5rem] h-[0.5rem] "></div>
-            <p className="font-semibold text-neutral-600">Habit Name</p>
+            <p className="font-medium text-neutral-600 text-sm">Habit Name</p>
             </div>
-            <div>
+            <div className="flex gap-2 text-sm items-center text-center">
+              <Checkbox/>
               <p>Followed</p>
-              <input type="checkbox"></input>
             </div>
           </div>
           </motion.div>
@@ -198,7 +199,7 @@ export function Main() {
             id="calnader"
           >
             <div>
-              kljh
+              <Calendar/>
             </div>
           </motion.div>
 
