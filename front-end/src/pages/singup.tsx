@@ -2,10 +2,29 @@
 import { useNavigate } from "react-router-dom";
 import { Logo } from "../components/logo";
 import { Loader } from "../components/Loader";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
 export function SignUp() {
   const navigate = useNavigate();
-  const [isLoading,setIsLoading] = useState<boolean>(false)
+  const [userData, setUserData] = useState<{firstname:string,
+    lastname:string,
+    email:string,
+    password:string,}>({
+    firstname: '',
+    lastname: '',
+    email: '',
+    password: '',
+  })
+  const [isLoading,setIsLoading] = useState<boolean>(false);
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) =>{
+    const {name, value} = e.target;
+    setUserData(prev=>({
+      ...prev,
+      [name]:value
+    }))
+  }
+
   return (
     <>
     <div className="absolute">
@@ -24,18 +43,18 @@ export function SignUp() {
     <div className="w-full mb-5">
     <div className="relative w-full mb-5 flex gap-3">   
         <div>
-        <label htmlFor="input" className="text-sm ml-1 text-green-950">Firstname</label>
-    <input type="text" className="w-full pl-3 pr-10 py-2 bg-transparent placeholder:text-slate-400 text-slate-600 text-sm border border-slate-200 rounded-md transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow" placeholder="email@gmail.com" />
+        <label htmlFor="input"  className="text-sm ml-1 text-green-950">Firstname</label>
+    <input type="text" name="firstname" className="w-full pl-3 pr-10 py-2 bg-transparent placeholder:text-slate-400 text-slate-600 text-sm border border-slate-200 rounded-md transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow" placeholder="Bill" onChange={handleChange} value={userData.firstname} />
             </div>    
             <div>
                <label htmlFor="input" className="text-sm ml-1 text-green-950">Lastname</label>
-    <input type="text" className="w-full pl-3 pr-10 py-2 bg-transparent placeholder:text-slate-400 text-slate-600 text-sm border border-slate-200 rounded-md transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow" placeholder="email@gmail.com" />
+    <input type="text" className="w-full pl-3 pr-10 py-2 bg-transparent placeholder:text-slate-400 text-slate-600 text-sm border border-slate-200 rounded-md transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow" placeholder="Gates" name="lastname" onChange={handleChange} value={userData.lastname}/>
     </div>
                 </div>     
 
   <div className="relative w-full">      
     <label htmlFor="input" className="text-sm ml-1 text-green-950">Email</label>      
-    <input type="text" className="w-full pl-3 pr-10 py-2 bg-transparent placeholder:text-slate-400 text-slate-600 text-sm border border-slate-200 rounded-md transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow" placeholder="email@gmail.com" />
+    <input type="text" className="w-full pl-3 pr-10 py-2 bg-transparent placeholder:text-slate-400 text-slate-600 text-sm border border-slate-200 rounded-md transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow" placeholder="email@gmail.com" name="email" onChange={handleChange} value={userData.email} />
  
    
 
@@ -48,7 +67,7 @@ export function SignUp() {
               <input
                 type="password"
                 className="w-full pl-3 pr-3 py-2 bg-transparent placeholder:text-slate-400 text-slate-600 text-sm border border-slate-200 rounded-md transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
-                placeholder="Your password"
+                placeholder="Your password" name="password" onChange={handleChange} value={userData.password}
               />
               <p className="flex items-center !mt-3 text-xs text-slate-400">
                 <svg
@@ -69,8 +88,13 @@ export function SignUp() {
             </div>
           </div>
           <div className="text-center mt-5 w-full">
-          <button className="!rounded-md  bg-[#21a510] w-full !py-2 px border border-transparent text-center text-sm !text-white transition-all  hover:shadow-lg focus:bg-green-700 focus:shadow-none active:bg-green-700 hover:bg-green-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none hover:cursor-pointer " type="button" onClick={()=>{
-            setIsLoading(!isLoading)
+          <button className="!rounded-md  bg-[#21a510] w-full !py-2 px border border-transparent text-center text-sm !text-white transition-all  hover:shadow-lg focus:bg-green-700 focus:shadow-none active:bg-green-700 hover:bg-green-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none hover:cursor-pointer " type="button" onClick={async ()=>{
+            // setIsLoading(!isLoading)
+            
+            const response = await axios.post("http://localhost:8787/api/v1/user/signup", userData)
+            console.log(userData)
+            console.log(response)
+
           }}>
           
   Sing up

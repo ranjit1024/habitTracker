@@ -3,6 +3,7 @@ import { PrismaClient } from "@prisma/client/edge";
 import { withAccelerate } from "@prisma/extension-accelerate";
 import { Jwt } from "hono/utils/jwt";
 import bcrypt from "bcryptjs";
+import { cors } from "hono/cors";
 
 export const userrouter = new Hono<{
   Bindings: {
@@ -10,6 +11,7 @@ export const userrouter = new Hono<{
     JWT_PASSWORD : string
   };
 }>();
+userrouter.use("*", cors())
 
 userrouter.post("/signup", async (c) => {
   const body = await c.req.json();
@@ -48,12 +50,10 @@ userrouter.post("/signup", async (c) => {
   }
 });
 
-userrouter.post('singin', async(c)=>{
+userrouter.post('/singin', async(c)=>{
   const body = await c.req.json();
   const prisma = new PrismaClient({
     datasourceUrl: c.env.DATABASE_URL
   }).$extends(withAccelerate());
 
-  
-  
 })
