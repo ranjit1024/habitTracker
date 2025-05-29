@@ -93,7 +93,7 @@ export function SignUp() {
             
             const response = await axios.post("http://localhost:8787/api/v1/user/signup", userData)
             console.log(response.data);
-            localStorage.setItem("token",JSON.stringify(response.data))
+            localStorage.setItem("token",response.data)
             navigate("/main")
             setIsLoading(false)
 

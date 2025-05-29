@@ -3,6 +3,8 @@ import "../App.css"
 import 'rsuite/dist/rsuite.min.css'; 
 import { DateRangePicker } from "rsuite";
 
+import axios from "axios";
+
 export function Add() {
   return (
     <div className="bg-green-50 h-[100vh] max-md:w-[100vw] max-md:h-[100%] font-mona ">
@@ -54,7 +56,20 @@ export function Add() {
      
       </div>
       <div className="w-fit">
-        <button className="px-7 py-2 bg-green-500 !rounded-md !text-white !text-[1rem] hover:scale-104 ">Follow Habit</button>
+        <button className="px-7 py-2 bg-green-500 !rounded-md !text-white !text-[1rem] hover:scale-104 " onClick={async()=>{
+          // const token = (localStorage.getItem('token'))
+          // console.log(token)
+          // console.log(token)
+          // if(!token){
+          //   console.error("not token")
+          //   return;
+          // }
+          const reponse = await axios.post('http://localhost:8787/api/v1/habit/add', {
+            token:localStorage.getItem("token")
+          });
+          console.log(reponse)
+        
+        }}>Follow Habit</button>
       </div>
  
      

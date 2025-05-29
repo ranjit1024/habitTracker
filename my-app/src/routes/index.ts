@@ -1,7 +1,7 @@
 import { Hono } from "hono";
 import { PrismaClient } from "@prisma/client/edge";
 import { withAccelerate } from "@prisma/extension-accelerate";
-import { Jwt } from "hono/utils/jwt";
+import { sign } from "hono/jwt";
 import bcrypt from "bcryptjs";
 import { cors } from "hono/cors";
 
@@ -41,7 +41,7 @@ userrouter.post("/signup", async (c) => {
       },
 
     });
-    const token = await Jwt.sign({
+    const token = await sign({
       id: createuser.id,
       email: createuser.email
     }, c.env.JWT_PASSWORD);
@@ -68,7 +68,7 @@ userrouter.post('/signin', async (c) => {
       const compare = await bcrypt.compare(body.password, exitstingUser.password);
       if (compare) {
 
-        const token = await Jwt.sign({
+        const token = await sign({
           id: exitstingUser.id,
           email: exitstingUser.email
         }, c.env.JWT_PASSWORD);

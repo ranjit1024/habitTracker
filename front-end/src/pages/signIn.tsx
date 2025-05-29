@@ -83,7 +83,7 @@ export function Signin() {
             setLoading(true)
             const response = await axios.post("http://localhost:8787/api/v1/user/signin", userData);
             if(response.data.msg == "ok"){
-              localStorage.setItem('token', JSON.stringify(response.data.token))
+              localStorage.setItem('token', response.data.token)
               navigate('/main');
             }
             setLoading(false)
