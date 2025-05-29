@@ -1,9 +1,10 @@
 import Logo from "../assets/habit.png";
+import "../App.css"
 
-import { DateRangePicker } from "rsuite";
+
 export function Add() {
   return (
-    <div className="bg-green-50 h-[100vh] font-mona">
+    <div className="bg-green-50 h-[100vh] max-md:w-[100vw] max-md:h-[100%] font-mona ">
       <div className="flex justify-between px-3 py-3 ">
         <div className="flex items-center gap-1    ">
           <img src={Logo} alt="" height={30} width={30} />
@@ -14,15 +15,15 @@ export function Add() {
           <img
             width="32"
             height="48"
-            src="https://img.icons8.com/pulsar-line/48/lifecyclepng"
+            src="https://img.icons8.com/pulsar-line/48/lifecycle.png"
             alt="lifecycle"
           />
         </div>
       </div>
 
-      <div className="!p-10 flex items-center flex-col">
+      <div className="!p-10 flex items-center flex-col ">
     <p className="text-3xl !mb-5 text-green-900/70 font-medium">Start Habit</p>
-        <div className="bg-white p-5 rounded-md shadow-sm   flex gap-5  items-center ">
+        <div className="bg-white p-5 rounded-md shadow-sm   flex gap-5  items-center max-md:flex-wrap max-md:w-[100vw] max-md:justify-center ">
           <div className="w-fit">
             <div className="relative ">
     
@@ -40,11 +41,11 @@ export function Add() {
             </div>
           </div>
           
-      <div className="w-fit">
-        <DateRangePicker/>
+      <div className="w-fit max-md:w-fit max-lg:flex max-lg:justify-center">
+     
       </div>
       <div className="w-fit">
-        <button className="px-7 py-2 bg-green-500 !rounded-md !text-white !text-[1rem] hover:scale-104 ">Start Habit</button>
+        <button className="px-7 py-2 bg-green-500 !rounded-md !text-white !text-[1rem] hover:scale-104 ">Follow Habit</button>
       </div>
  
      
@@ -59,7 +60,7 @@ export function Add() {
 export function Break() {
   return (
     <div className="bg-green-50 h-[100vh] font-mona">
-      <div className="flex justify-between px-3 py-3 ">
+      <div className="flex justify-between px-3 py-3  ">
         <div className="flex items-center gap-1    ">
           <img src={Logo} alt="" height={30} width={30} />
           <p className="text-[1.2rem] text-gray-900 font-medium">H-Track</p>
@@ -75,9 +76,9 @@ export function Break() {
         </div>
       </div>
 
-      <div className="!p-10 flex items-center flex-col">
+      <div className="!p-10 flex items-center flex-col ">
     <p className="text-3xl !mb-5 text-red-900/70 font-medium">Break Habit</p>
-        <div className="bg-white p-5 rounded-md shadow-sm   flex gap-5  items-center ">
+        <div className="bg-white p-5 rounded-md shadow-sm   flex gap-5  items-center max-md:flex-wrap max-md:w-[100vw] max-md:h-[100vh] ">
           <div className="w-fit">
             <div className="relative ">
     
@@ -96,7 +97,7 @@ export function Break() {
           </div>
           
       <div className="w-fit">
-        <DateRangePicker/>
+        
       </div>
       <div className="w-fit">
         <button className="px-7 py-2 bg-red-500 !rounded-md !text-white !text-[1rem] hover:scale-104 ">Break Habit</button>

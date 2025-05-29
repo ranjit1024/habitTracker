@@ -89,11 +89,13 @@ export function SignUp() {
           </div>
           <div className="text-center mt-5 w-full">
           <button className="!rounded-md  bg-[#21a510] w-full !py-2 px border border-transparent text-center text-sm !text-white transition-all  hover:shadow-lg focus:bg-green-700 focus:shadow-none active:bg-green-700 hover:bg-green-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none hover:cursor-pointer " type="button" onClick={async ()=>{
-            // setIsLoading(!isLoading)
+            setIsLoading(!isLoading)
             
             const response = await axios.post("http://localhost:8787/api/v1/user/signup", userData)
-            console.log(userData)
-            console.log(response)
+            console.log(response.data);
+            localStorage.setItem("token",JSON.stringify(response.data))
+            navigate("/main")
+            setIsLoading(false)
 
           }}>
           

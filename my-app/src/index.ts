@@ -1,5 +1,6 @@
 import { Hono } from 'hono'
 import { userrouter } from './routes'
+import { cors } from 'hono/cors'
 
 const app = new Hono<{
   Bindings:{

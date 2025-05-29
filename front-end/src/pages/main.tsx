@@ -4,9 +4,17 @@ import '../anoter.css'
 import { Completed } from "../components/completed";
 import { motion } from "motion/react";
 import "rsuite/dist/rsuite.css";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 export function Main() {
   let arrya = ["M", "T", "W", "T", "F", "S", "S"];
+  const navigate = useNavigate();
+  if(!localStorage.getItem('token')){
+    useEffect(()=>{
+      navigate('/')
+    },[])
+  }
   return (
     <div className="bg-green-50 h-[100%] max-md:w-[100vw] max-md:flex max-md:flex-col max-md:flex-wrap font-mona">
       <div className="flex justify-between px-3 py-3 ">
