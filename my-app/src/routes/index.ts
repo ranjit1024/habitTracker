@@ -51,7 +51,7 @@ userrouter.post("/signup", async (c) => {
   }
 });
 
-userrouter.post('/singin', async (c) => {
+userrouter.post('/signin', async (c) => {
   const body = await c.req.json();
 
   const prisma = new PrismaClient({
@@ -73,11 +73,14 @@ userrouter.post('/singin', async (c) => {
           email: exitstingUser.email
         }, c.env.JWT_PASSWORD);
 
-        return c.json(token)
+        return c.json({token,msg:"ok"})
       }
       else{
         return c.text("Incorrect Password")
       }
+    }
+    else{
+      return c.text("User not found")
     }
   }
   catch(e){
@@ -86,3 +89,4 @@ userrouter.post('/singin', async (c) => {
   }
 
 })
+

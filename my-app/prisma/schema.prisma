@@ -27,5 +27,6 @@ model Habits{
   userid  Int
   allhabits String
   currethabit String
+  startdate DateTime
   user  User  @relation(fields: [userid], references: [id])
 }

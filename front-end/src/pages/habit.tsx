@@ -106,7 +106,14 @@ export function Break() {
           </div>
           
       <div className="w-fit">
-        
+          <DateRangePicker size="md" onOk={(e)=>{
+              console.log(e)
+            
+            }} shouldDisableDate={(date:Date)=>{
+                const today = new Date();
+                today.setHours(0,0,0,0);
+                return date < today
+            }}/>
       </div>
       <div className="w-fit">
         <button className="px-7 py-2 bg-red-500 !rounded-md !text-white !text-[1rem] hover:scale-104 ">Break Habit</button>

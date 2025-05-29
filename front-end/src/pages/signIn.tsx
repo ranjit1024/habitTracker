@@ -1,13 +1,34 @@
 import { useNavigate } from "react-router-dom";
 import { Logo } from "../components/logo";
+import React, { useEffect, useState } from "react";
+import { Loader } from "../components/Loader";
+import axios from "axios";
 export function Signin() {
   const navigate = useNavigate();
+  const [Loading, setLoading] = useState<boolean>(false);
+  const [userData, setUserData] = useState<{
+    email:string,
+    password:string
+  }>({
+    email:'',
+    password:''
+  })
+
+  function handleUserInput(e:React.ChangeEvent<HTMLInputElement>){
+    const { name, value} = e.target;
+    setUserData(prev => ({
+      ...prev,
+      [name]:value
+    }))
+  }
   return (
     <>
      <div className="absolute">
         <Logo/>
         
         </div>
+        {Loading ? <Loader/
+        >:null}
   
       <div className="h-[100vh]  flex justify-between items-center font-mona">
         <div className="w-[60%] max-md:hidden h-full bg-center bg-cover bg-no-repeat bg-[url(https://cdn.leonardo.ai/users/a2f14ac8-df2c-4da0-aef1-7ecf6e45fdce/generations/88e56ba9-28c3-4342-93a6-cceca41e354a/Leonardo_Phoenix_10_A_visually_appealing_onemonth_calendar_wit_0.jpg)]">
@@ -19,7 +40,10 @@ export function Signin() {
     <div className="w-full mb-5">
   <div className="relative w-full">    
     <label htmlFor="input" className="text-sm ml-1 text-green-950">Email</label>        
-    <input type="text" className="w-full pl-3 pr-10 py-2 bg-transparent placeholder:text-slate-400 text-slate-600 text-sm border border-slate-200 rounded-md transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow" placeholder="email@gmail.com" />
+    <input type="text" className="w-full pl-3 pr-10 py-2 bg-transparent placeholder:text-slate-400 text-slate-600 text-sm border border-slate-200 rounded-md transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow" placeholder="email@gmail.com" 
+    name="email"
+    onChange={handleUserInput}
+    value={userData.email}/>
 
   </div>
 </div>
@@ -29,8 +53,11 @@ export function Signin() {
                 <label htmlFor="input" className="text-sm ml-1 text-green-950">Password</label>
               <input
                 type="password"
+                name="password"
                 className="w-full pl-3 pr-3 py-2 bg-transparent placeholder:text-slate-400 text-slate-600 text-sm border border-slate-200 rounded-md transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
                 placeholder="Your password"
+                onChange={handleUserInput} 
+                value={userData.password}
               />
               <p className="flex items-center !mt-3 text-xs text-slate-400">
                 <svg
@@ -51,7 +78,16 @@ export function Signin() {
             </div>
           </div>
           <div className="text-center mt-5 w-full">
-          <button className="!rounded-md  bg-[#21a510] w-full  py-2 px border border-transparent text-center !text-sm !text-white transition-all  hover:shadow-lg focus:bg-green-700 focus:shadow-none active:bg-green-700 hover:bg-green-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none hover:cursor-pointer " type="button">
+          <button className="!rounded-md  bg-[#21a510] w-full  py-2 px border border-transparent text-center !text-sm !text-white transition-all  hover:shadow-lg focus:bg-green-700 focus:shadow-none active:bg-green-700 hover:bg-green-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none hover:cursor-pointer " type="button"
+          onClick={async()=>{
+            setLoading(true)
+            const response = await axios.post("http://localhost:8787/api/v1/user/signin", userData);
+            if(response.data.msg == "ok"){
+              localStorage.setItem('token', JSON.stringify(response.data.token))
+              navigate('/main');
+            }
+            setLoading(false)
+          }}>
   Sing in
 </button>
           </div>

@@ -5,6 +5,7 @@ import { motion } from "motion/react";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import CustomCalendar from "../components/calander";
+import { Calendar } from "rsuite";
 
 
 export function Main() {
@@ -47,7 +48,7 @@ export function Main() {
           transition={{
             duration:0.8
           }}  className="flex relative top-3 -left-3 justify-end px-10 max-md:px-1 " >
-      <button className="  !text-green-500 !text-[1rem] underline-offset-3 !rounded-xl !font-medium active:scale-101"> <span className="hover:text-lime-400">Follow</span> / <span className="hover:text-red-500"> Break Habit</span></button>
+      <button className="  !text-green-500 !text-[1rem] underline-offset-3 !rounded-xl !font-medium active:scale-101"> <span className="hover:text-lime-400" onClick={()=>{navigate("/habits/add")}}>Follow</span> / <span className="hover:text-red-500" onClick={()=>navigate("/habits/break")}> Break Habit</span></button>
       </motion.div>
 
 
@@ -199,7 +200,7 @@ export function Main() {
             id="calnader"
           >
             <div className="w-[100%] h-[100%]">
-              <CustomCalendar/>
+              <Calendar compact/>
             </div>
           </motion.div>
 
