@@ -1,14 +1,13 @@
 import Logo from "../assets/habit.png";
-import { Calendar } from "@/components/ui/calendar";
+
 import { Completed } from "../components/completed";
 import { motion } from "motion/react";
-import {Checkbox} from "rsuite"
 import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 
 export function Main() {
-  const [date, setDate] = useState<Date | undefined>(new Date());
+
   
   let arrya = ["M", "T", "W", "T", "F", "S", "S"];
   const navigate = useNavigate();
@@ -78,7 +77,7 @@ export function Main() {
             <p className="font-medium text-neutral-600 text-sm">Habit Name</p>
             </div>
             <div className="flex gap-2 text-sm items-center text-center">
-              <Checkbox/>
+             
               <p>Followed</p>
             </div>
           </div>
@@ -199,7 +198,7 @@ export function Main() {
             id="calnader"
           >
             <div>
-              <Calendar/>
+              
             </div>
           </motion.div>
 

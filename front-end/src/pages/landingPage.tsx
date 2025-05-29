@@ -141,7 +141,7 @@ export function LandingPage() {
             once: true,
             amount: 0.4,
           }}
-          className="pt-6 !pb-20  flex max-md:px-0 max-md:m-2 items-center justify-center text-center px-60 flex-col "
+          className="pt-6 pb-20  flex max-md:px-0 max-md:m-2 items-center justify-center text-center px-60 flex-col "
         >
           <p className="!leading-16 max-md:w[100vw]  text-green-950 text-[3rem] text-center  font-medium">
             Adapt good habits and break bad ones using a scientific way
