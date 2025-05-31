@@ -4,8 +4,9 @@ import 'rsuite/dist/rsuite.min.css';
 import { DateRangePicker } from "rsuite";
 
 import axios from "axios";
-
+import { useState } from "react";
 export function Add() {
+  const [range, setRange] = useState([])
   return (
     <div className="bg-green-50 h-[100vh] max-md:w-[100vw] max-md:h-[100%] font-mona ">
        <div className="flex justify-between px-3 py-3 ">
@@ -45,29 +46,24 @@ export function Add() {
           </div>
           
       <div className="w-fit max-md:w-fit max-lg:flex max-lg:justify-center">
-            <DateRangePicker size="md" onOk={(e)=>{
-              console.log(e)
+            <DateRangePicker size="md" onOk={(e:any)=>{
+              setRange(e);
             
             }} shouldDisableDate={(date:Date)=>{
                 const today = new Date();
                 today.setHours(0,0,0,0);
                 return date < today
-            }}/>
+            }}
+            
+            />
      
       </div>
       <div className="w-fit">
         <button className="px-7 py-2 bg-green-500 !rounded-md !text-white !text-[1rem] hover:scale-104 " onClick={async()=>{
           // const token = (localStorage.getItem('token'))
-          // console.log(token)
-          // console.log(token)
-          // if(!token){
-          //   console.error("not token")
-          //   return;
-          // }
-          const reponse = await axios.post('http://localhost:8787/api/v1/habit/add', {
-            token:localStorage.getItem("token")
-          });
-          console.log(reponse)
+          const date = new Date();
+          console.log(date);
+          console.log(range[1])
         
         }}>Follow Habit</button>
       </div>
