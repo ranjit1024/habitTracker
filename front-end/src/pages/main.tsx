@@ -4,12 +4,11 @@ import { Completed } from "../components/completed";
 import { motion } from "motion/react";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import CustomCalendar from "../components/calander";
+import { useState } from "react";
 import { Calendar } from "rsuite";
 
 
 export function Main() {
-
   
   let arrya = ["M", "T", "W", "T", "F", "S", "S"];
   const navigate = useNavigate();
@@ -78,8 +77,15 @@ export function Main() {
             <div className="bg-green-500/70 animate-pulse p-1 rounded-full  w-[0.5rem] h-[0.5rem] "></div>
             <p className="font-medium text-neutral-600 text-sm">Habit Name</p>
             </div>
-            <div className="flex gap-2 text-sm items-center text-center">
-             
+            <div className="flex gap-2 text-sm items-center  text-center">
+                   <motion.input
+        type="checkbox"
+       
+        className="w-4 h-4 accent-green-400 rounded-2xl  "
+        whileTap={{ scale: 1.3 }}
+        transition={{ type: "tween", stiffness: 300 }}
+      />
+
               <p>Followed</p>
             </div>
           </div>

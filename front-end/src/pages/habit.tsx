@@ -4,9 +4,10 @@ import 'rsuite/dist/rsuite.min.css';
 import { DateRangePicker } from "rsuite";
 
 import axios from "axios";
-import { useState } from "react";
+import { useRef, useState } from "react";
 export function Add() {
   const [range, setRange] = useState([])
+  const habit = useRef<HTMLInputElement>(null)
   return (
     <div className="bg-green-50 h-[100vh] max-md:w-[100vw] max-md:h-[100%] font-mona ">
        <div className="flex justify-between px-3 py-3 ">
@@ -34,6 +35,7 @@ export function Add() {
               <input
                 type="text"
                 className="w-[40vw] pl-3 pr-10 py-2 bg-transparent placeholder:text-slate-400 text-slate-600 text-sm border border-slate-200 rounded-md transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300  focus:shadow"
+                ref={habit}
                 placeholder="Start Habit"
               />
 
@@ -60,11 +62,25 @@ export function Add() {
       </div>
       <div className="w-fit">
         <button className="px-7 py-2 bg-green-500 !rounded-md !text-white !text-[1rem] hover:scale-104 " onClick={async()=>{
+          const today = new Date();
           // const token = (localStorage.getItem('token'))
-          const date = new Date();
-          console.log(date);
-          console.log(range[1])
-        
+         
+          if(habit.current && range[0] && range[1]){
+             const response = await axios.post("http://localhost:8787/api/v1/habit/add",{token:localStorage.getItem('token'),
+            habit:habit.current.value,
+            createdate:today,
+            startdate:range[0],
+            enddate:range[1]
+          });
+          console.log(response)
+          console.log(habit.current?.value)
+        }
+        else{
+          console.error("Enter valid input")
+        }
+        console.log("start", range[0])
+          console.log("end",range[1])
+          console.log(today)
         }}>Follow Habit</button>
       </div>
  
