@@ -1,0 +1,22 @@
+/* This class will be applied to the div INSIDE the calendar cell for the target date */
+.green-date-cell {
+  background-color: #00FF00; /* Green */
+  color: white;
+  border-radius: 50%; /* Optional: for a circular highlight */
+  width: 32px; /* Adjust as needed for sizing */
+  height: 32px; /* Adjust as needed for sizing */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; /* Center the circle */
+  /* You might need to adjust padding/margin of the parent rsuite cell if it overlaps */
+}
+
+/* You might need to target the rsuite's specific cell class if you want to apply the green to the entire cell background directly */
+/* For example, if you want to apply to the parent 'rs-calendar-table-cell' */
+/*
+.rs-calendar-table-cell .green-date-cell-parent {
+  background-color: #00FF00;
+  color: white;
+}
+*/

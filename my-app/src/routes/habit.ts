@@ -3,7 +3,7 @@ import { PrismaClient } from "@prisma/client/edge";
 import { withAccelerate } from "@prisma/extension-accelerate";
 import { verify, decode } from "hono/jwt";
 import { cors } from "hono/cors";
-import { tr } from "date-fns/locale";
+import { id, tr } from "date-fns/locale";
 
 export const habitrouter = new Hono<{
   Bindings: {
@@ -58,3 +58,36 @@ habitrouter.post("/add", async (c) => {
   }
   return c.text("not");
 });
+
+habitrouter.get("/", async (c)=>{
+  const prisma = new PrismaClient({
+    datasourceUrl: c.env.DATABASE_URL}).$extends(withAccelerate());
+
+    const token  =  c.req.query("token");
+    console.log(token)
+
+  
+  if(token){
+    const verifyToken = await verify(token, c.env.JWT_PASSWORD);
+    try{
+      const currethabit = await prisma.habits.findFirst({
+        where:{
+          userid:Number(verifyToken.id),
+        },
+        orderBy:{
+          id:'desc'
+        }
+      })
+      return c.json({
+        cHabit:String(currethabit?.currethabit)})
+    }
+    catch(e){
+      console.log("something went wrong")
+      console.log(e);
+    }
+  }
+  else{
+    return c.text("unautnicate")
+  }
+  return c.text('workiing')
+})

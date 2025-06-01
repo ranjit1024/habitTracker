@@ -5,8 +5,10 @@ import { DateRangePicker } from "rsuite";
 
 import axios from "axios";
 import { useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 export function Add() {
   const [range, setRange] = useState([])
+  const navigate = useNavigate()
   const habit = useRef<HTMLInputElement>(null)
   return (
     <div className="bg-green-50 h-[100vh] max-md:w-[100vw] max-md:h-[100%] font-mona ">
@@ -72,6 +74,7 @@ export function Add() {
             startdate:range[0],
             enddate:range[1]
           });
+          navigate("/main")
           console.log(response)
           console.log(habit.current?.value)
         }
